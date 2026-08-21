@@ -74,7 +74,7 @@ export const rooms = [
     name: { en: 'Presidential Suite', am: 'የፕሬዝዳንት ሱፕ', had: 'Presidential Suite' },
     desc: {
       en: 'Our finest suite — a king bedroom, private dining area, and a terrace overlooking the Hossana hills. The ultimate Lem experience.',
-      am: 'ታላቁ ሱፓችን — የንጉስ አልጋ፣ የግል አብራራ እና የሆሳና ኮረብታ እይታ ቴራሳ።',
+      am: 'ታላቁ ሱፓችን — የንጉስ አልጋ፣ የግል አብራራ እና የሆሳዕና ኮረብታ እይታ ቴራሳ።',
       had: 'Bishan suite — king bed, private dining, terrace hill view.',
     },
     price: 7200,
@@ -137,15 +137,15 @@ export const galleryImages = [
 
 export const staff = [
   { name: 'Tadesse Bekele', role: { en: 'General Manager', am: 'ዋና አስተዳዳሪ', had: 'General Manager' }, image: 'https://images.pexels.com/photos/12311567/pexels-photo-12311567.jpeg?auto=compress&cs=tinysrgb&h=650&w=940', bio: { en: 'Twenty years in Ethiopian hospitality. Tadesse believes every guest is family.', am: 'ለሀያ ዓመታት በኢትዮጵያ መስተንግዶ።', had: '20 years hospitality.' } },
-  { name: 'Helen Girma', role: { en: 'Head Chef', am: 'ዋና ሼፍ', had: 'Head Chef' }, image: 'https://images.pexels.com/photos/38197025/pexels-photo-38197025.jpeg?auto=compress&cs=tinysrgb&h=650&w=940', bio: { en: 'Helen brings Hossana\'s flavours to every plate. Trained in Addis Ababa and Florence.', am: 'የሆሳናን ጣዕሞች ወደ ስልት ታስተላልፋለች።', had: 'Hossana flavours, trained Addis & Florence.' } },
-  { name: 'Solomon Abera', role: { en: 'Guest Relations', am: 'የእንግድ ግንኙነት', had: 'Guest Relations' }, image: 'https://images.pexels.com/photos/37070438/pexels-photo-37070438.jpeg?auto=compress&cs=tinysrgb&h=650&w=940', bio: { en: 'Solomon knows Hossana\'s every corner and loves sharing hidden gems with guests.', am: 'ሰሎሞን የሆሳናን ሁሉንም ጥልቅ ይወቃል።', had: 'Knows Hossana well.' } },
+  { name: 'Helen Girma', role: { en: 'Head Chef', am: 'ዋና ሼፍ', had: 'Head Chef' }, image: 'https://images.pexels.com/photos/38197025/pexels-photo-38197025.jpeg?auto=compress&cs=tinysrgb&h=650&w=940', bio: { en: 'Helen brings Hossana\'s flavours to every plate. Trained in Addis Ababa and Florence.', am: 'የሆሳዕናን ጣዕሞች ወደ ስልት ታስተላልፋለች።', had: 'Hossana flavours, trained Addis & Florence.' } },
+  { name: 'Solomon Abera', role: { en: 'Guest Relations', am: 'የእንግድ ግንኙነት', had: 'Guest Relations' }, image: 'https://images.pexels.com/photos/37070438/pexels-photo-37070438.jpeg?auto=compress&cs=tinysrgb&h=650&w=940', bio: { en: 'Solomon knows Hossana\'s every corner and loves sharing hidden gems with guests.', am: 'ሰሎሞን የሆሳዕናን ሁሉንም ጥልቅ ይወቃል።', had: 'Knows Hossana well.' } },
   { name: 'Marta Tola', role: { en: 'Housekeeping Manager', am: 'የቤት ጥበቃ አስተዳዳሪ', had: 'Housekeeping Manager' }, image: 'https://images.pexels.com/photos/13111213/pexels-photo-13111213.jpeg?auto=compress&cs=tinysrgb&h=650&w=940', bio: { en: 'Marta leads our housekeeping team with a quiet, meticulous care.', am: 'ማርታ የቤት ጥበቃ ቡድንን ትመራለች።', had: 'Leads housekeeping team.' } },
 ];
 
 export const nearbySites = [
   {
     name: { en: 'Ajora Waterfall', am: 'አጆራ ውሃ መንጭ', had: 'Ajora Fisha' },
-    desc: { en: 'A stunning twin waterfall nestled in the Hossana countryside. A short drive from the hotel, best visited in the morning light.', am: 'በሆሳና አካባቢ ያለ ትልቅ የውሃ መንጭ።', had: 'Twin waterfall near Hossana.' },
+    desc: { en: 'A stunning twin waterfall nestled in the Hossana countryside. A short drive from the hotel, best visited in the morning light.', am: 'በሆሳዕና አካባቢ ያለ ትልቅ የውሃ መንጭ።', had: 'Twin waterfall near Hossana.' },
     distance: '18 km',
     image: 'https://images.pexels.com/photos/33134343/pexels-photo-33134343.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
   },
@@ -156,8 +156,8 @@ export const nearbySites = [
     image: 'https://images.pexels.com/photos/13507834/pexels-photo-13507834.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
   },
   {
-    name: { en: 'Hossana Market', am: 'የሆሳና ገበያ', had: 'Hossana Market' },
-    desc: { en: 'The vibrant heart of Hossana — spices, textiles, and fresh produce. Open daily, busiest on Saturdays.', am: 'የሆሳና ህይወት ማዕከል — ቅመሞች እና ጨርቆች።', had: 'Spices, textiles, fresh produce.' },
+    name: { en: 'Hossana Market', am: 'የሆሳዕና ገበያ', had: 'Hossana Market' },
+    desc: { en: 'The vibrant heart of Hossana — spices, textiles, and fresh produce. Open daily, busiest on Saturdays.', am: 'የሆሳዕና ህይወት ማዕከል — ቅመሞች እና ጨርቆች።', had: 'Spices, textiles, fresh produce.' },
     distance: '2 km',
     image: 'https://images.pexels.com/photos/36713810/pexels-photo-36713810.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
   },
@@ -185,7 +185,7 @@ export const t = {
     eyebrow: { en: 'A gentler way to arrive', am: 'ለመውደቅ ለስላሳ መንገድ', had: 'Xiqqa xiiya gorsu' },
     title1: { en: 'Stay awhile.', am: 'ትንሽ ቆይ።', had: 'Xiqqa baaru.' },
     title2: { en: 'Feel at home.', am: 'እንደ ቤትዎ ይሰማዎ።', had: 'Lampe geeshsha.' },
-    copy: { en: 'A quiet, considered hotel in the heart of Hossana. Come for the view, stay for the warmth.', am: 'በሆሳና ልብ ውስጥ ቅንነት ያለው ሆቴል።', had: 'Hossana giddo quiet hotel.' },
+    copy: { en: 'A quiet, considered hotel in the heart of Hossana. Come for the view, stay for the warmth.', am: 'በሆሳዕና ልብ ውስጥ ቅንነት ያለው ሆቴል።', had: 'Hossana giddo quiet hotel.' },
     cta1: { en: 'Find your room', am: 'ክፍልዎን ያግኙ', had: 'Baatta kaawi' },
     cta2: { en: 'Watch our story', am: 'ታሪካችንን ይመልከቱ', had: 'Story aayi' },
     scroll: { en: 'Scroll to explore', am: 'ለመመልከት ያሸብልሉ', had: 'Xiiwa aayi' },
@@ -225,7 +225,7 @@ export const t = {
     galleryTitle2: { en: 'Leave a little lighter.', am: 'ትንሽ ቀላል ይውጡ።', had: 'Xiqqa fayle ba\'a.' },
   },
   footer: {
-    tagline: { en: 'Thoughtful stays in the heart of Hossana.', am: 'በሆሳና ልብ ውስጥ ጥንቃቄ ያለው ቆይታ።', had: 'Hossana giddo thoughtful stay.' },
+    tagline: { en: 'Thoughtful stays in the heart of Hossana.', am: 'በሆሳዕና ልብ ውስጥ ጥንቃቄ ያለው ቆይታ።', had: 'Hossana giddo thoughtful stay.' },
     rights: { en: '© 2026 Lem Hotel', am: '© 2026 ሌም ሆቴል', had: '© 2026 Lem Hotel' },
   },
   rooms: {
@@ -260,7 +260,7 @@ export const t = {
   },
   about: {
     title: { en: 'Our Story', am: 'ታሪካችን', had: 'Story' },
-    subtitle: { en: 'A hotel built on warmth, rooted in Hossana.', am: 'በሞቅ የተገነባ ሆቴል፣ በሆሳና የተተከለ።', had: 'Hotel built on warmth, Hossana.' },
+    subtitle: { en: 'A hotel built on warmth, rooted in Hossana.', am: 'በሞቅ የተገነባ ሆቴል፣ በሆሳዕና የተተከለ።', had: 'Hotel built on warmth, Hossana.' },
     historyTitle: { en: 'The Lem story', am: 'የሌም ታሪክ', had: 'Lem story' },
     historyP1: { en: 'Lem Hotel opened its doors in 2018, the dream of a family who wanted to share the warmth of Hossana with the world. What began as a small guesthouse has grown into a beloved hotel, known for its quiet comfort and genuine hospitality.', am: 'ሌም ሆቴል በ2018 ተከፈተ፣ የቤተሰብ ህልም ነበር። ከትንሽ መነሻ ወደ ታዋቂ ሆቴል ደረሰ።', had: 'Lem 2018 galatino, family dream.' },
     historyP2: { en: 'The name "Lem" comes from the Hadiyissa word for peace and contentment — the feeling we want every guest to carry home.', am: 'የሌም ስም ከሐዲይኛ ቃል የመጣ ነው — ሰላምን ያመለክታል።', had: 'Lem means peace in Hadiyissa.' },
@@ -268,7 +268,7 @@ export const t = {
     value1: { en: 'Genuine warmth', am: 'እውነተኛ ሞቅ', had: 'Genuine warmth' },
     value1Desc: { en: 'Every guest is welcomed as family, not as a transaction.', am: 'እያንዳንዱ እንግዳ እንደ ቤተሰብ ይቀበላል።', had: 'Every guest family.' },
     value2: { en: 'Local roots', am: 'የአካባቢ ሥር', had: 'Local roots' },
-    value2Desc: { en: 'We source from Hossana\'s farmers and artisans, and celebrate Hadiyissa culture.', am: 'ከሆሳና አርሶ አደሮች እና ከእጅ ባለሙያዎች እንበላለን።', had: 'Source from Hossana.' },
+    value2Desc: { en: 'We source from Hossana\'s farmers and artisans, and celebrate Hadiyissa culture.', am: 'ከሆሳዕና አርሶ አደሮች እና ከእጅ ባለሙያዎች እንበላለን።', had: 'Source from Hossana.' },
     value3: { en: 'Quiet comfort', am: 'ጸጥተኛ ምቾት', had: 'Quiet comfort' },
     value3Desc: { en: 'Our spaces are designed for rest — no noise, no rush, just ease.', am: 'ለመውለድ የተዘጋጁ ቦታዎች — ያለ ድምፅ፣ ያለ ትንኮስ።', had: 'Spaces for rest.' },
     teamTitle: { en: 'The people of Lem', am: 'የሌም ሰዎች', had: 'Lem people' },
@@ -276,7 +276,7 @@ export const t = {
   },
   nearby: {
     title: { en: 'Nearby Attractions', am: 'በአቅራቢያ ያሉ ቦታዎች', had: 'Kaareshshu' },
-    subtitle: { en: 'Explore the wonders around Hossana — ancient stones, waterfalls, and vibrant markets.', am: 'በሆሳና አካባቢ ያሉ ቦታዎችን ይመልከቱ።', had: 'Explore around Hossana.' },
+    subtitle: { en: 'Explore the wonders around Hossana — ancient stones, waterfalls, and vibrant markets.', am: 'በሆሳዕና አካባቢ ያሉ ቦታዎችን ይመልከቱ።', had: 'Explore around Hossana.' },
     distance: { en: 'from hotel', am: 'ከሆቴል', had: 'hotel ir' },
     visit: { en: 'Plan a visit', am: 'ጉብኝ ያቅዱ', had: 'Visit yaadi' },
   },

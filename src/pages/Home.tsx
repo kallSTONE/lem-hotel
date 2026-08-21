@@ -4,9 +4,9 @@ import { useLang } from '@/context/LangContext';
 import { t, tr, rooms } from '@/data/content';
 
 const photos = {
-  hero: 'https://images.pexels.com/photos/2854553/pexels-photo-2854553.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-  room: 'https://images.pexels.com/photos/35747339/pexels-photo-35747339.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-  roomTwo: 'https://images.pexels.com/photos/34645131/pexels-photo-34645131.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+  hero: '/assets/Images/welcome.png',
+  room: '/assets/Images/img3.jpg',
+  roomTwo: '/assets/Images/img2.jpg',
   dining: 'https://images.pexels.com/photos/33144658/pexels-photo-33144658.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
   pool: 'https://images.pexels.com/photos/11363037/pexels-photo-11363037.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
   spa: 'https://images.pexels.com/photos/31234756/pexels-photo-31234756.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
@@ -60,7 +60,7 @@ export default function Home({ onBook }: { onBook: () => void }) {
         </div>
         <div className="room-grid">
           <article className="room-card featured-room">
-            <img src={rooms[0].image} alt={tr(rooms[0].name, lang)} />
+            <img src={photos.room} alt={tr(rooms[0].name, lang)} />
             <div className="room-info">
               <div>
                 <p className="eyebrow">01 / 03</p>
@@ -71,7 +71,7 @@ export default function Home({ onBook }: { onBook: () => void }) {
             </div>
           </article>
           <article className="room-card">
-            <img src={rooms[1].image} alt={tr(rooms[1].name, lang)} />
+            <img src={photos.roomTwo} alt={tr(rooms[1].name, lang)} />
             <div className="room-info">
               <div>
                 <p className="eyebrow">02 / 03</p>

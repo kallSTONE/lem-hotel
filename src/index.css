@@ -374,9 +374,9 @@ img {
   position: relative;
   z-index: 1;
 
-  padding: clamp(100px, 17vh, 165px) 11%;
+  padding: clamp(72px, 12vh, 120px) 11% 72px;
 
-  max-width: 680px;
+  max-width: min(900px, 64vw);
 }
 
 .eyebrow {
@@ -426,7 +426,7 @@ img {
 }
 
 .hero-copy {
-  max-width: 410px;
+  max-width: 500px;
 
   color: #f3f2ea;
 

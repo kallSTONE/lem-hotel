@@ -7,9 +7,9 @@ const photos = {
   hero: '/assets/Images/welcome.png',
   room: '/assets/Images/img3.jpg',
   roomTwo: '/assets/Images/img2.jpg',
-  dining: 'https://images.pexels.com/photos/33144658/pexels-photo-33144658.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-  pool: 'https://images.pexels.com/photos/11363037/pexels-photo-11363037.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-  spa: 'https://images.pexels.com/photos/31234756/pexels-photo-31234756.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+  dining: '/assets/Images/LemHotelVenue.jpg',
+  pool: '/assets/Images/NightView.jpg',
+  spa: '/assets/Images/Stage.jpg',
 };
 
 export default function Home({ onBook }: { onBook: () => void }) {

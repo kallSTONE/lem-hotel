@@ -2413,6 +2413,14 @@ footer .footer-brand {
   order: 2;
 }
 
+.nearby-card-image {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 2px;
+}
+
 .nearby-card-image img {
   width: 100%;
 
@@ -2476,6 +2484,125 @@ footer .footer-brand {
   line-height: 1.7;
 
   margin: 0 0 20px;
+}
+
+.nearby-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+}
+
+.nearby-image-trigger {
+  position: absolute;
+
+  left: 16px;
+  bottom: 16px;
+
+  background: rgba(7, 20, 38, 0.78);
+
+  color: #fff;
+
+  font-size: 11px;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  padding: 10px 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  transition: background 0.2s;
+}
+
+.nearby-image-trigger:hover {
+  background: rgba(7, 20, 38, 0.92);
+}
+
+.nearby-modal {
+  position: relative;
+
+  background: var(--paper);
+
+  width: min(980px, 100%);
+
+  max-height: min(92vh, 860px);
+
+  overflow: auto;
+
+  padding: 34px;
+
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.22);
+
+  border: 1px solid rgba(231, 224, 213, 0.9);
+}
+
+.nearby-modal h3 {
+  margin: 0;
+
+  font-family: var(--serif);
+
+  font-size: clamp(28px, 4vw, 42px);
+
+  color: var(--navy);
+
+  font-weight: 500;
+}
+
+.nearby-modal-subtitle {
+  margin: 10px 0 20px;
+
+  color: var(--muted);
+
+  max-width: 760px;
+}
+
+.nearby-modal-main-image {
+  border: 1px solid var(--line);
+
+  background: var(--cream);
+}
+
+.nearby-modal-main-image img {
+  width: 100%;
+
+  height: min(56vh, 520px);
+
+  object-fit: cover;
+}
+
+.nearby-modal-thumbs {
+  margin-top: 14px;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+
+  gap: 10px;
+}
+
+.nearby-modal-thumbs button {
+  padding: 0;
+
+  border: 2px solid transparent;
+
+  background: none;
+}
+
+.nearby-modal-thumbs button.active {
+  border-color: var(--gold);
+}
+
+.nearby-modal-thumbs img {
+  width: 100%;
+
+  height: 82px;
+
+  object-fit: cover;
 }
 
 .nearby-map-cta {
@@ -3354,6 +3481,12 @@ footer .footer-brand {
     order: 0;
   }
 
+  .nearby-modal {
+    width: min(760px, 100%);
+
+    padding: 26px;
+  }
+
   .gallery-masonry {
     columns: 2;
   }
@@ -3503,6 +3636,27 @@ footer .footer-brand {
 
   .section-pad {
     padding: 75px 7%;
+  }
+
+  .nearby-image-trigger {
+    left: 12px;
+    bottom: 12px;
+
+    font-size: 10px;
+  }
+
+  .nearby-modal {
+    padding: 18px;
+
+    max-height: 94vh;
+  }
+
+  .nearby-modal-main-image img {
+    height: 300px;
+  }
+
+  .nearby-modal-thumbs {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .intro {

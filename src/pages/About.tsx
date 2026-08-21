@@ -6,7 +6,7 @@ export default function About() {
   const { lang } = useLang();
   return (
     <main>
-      <PageHeader title={tr(t.about.title, lang)} subtitle={tr(t.about.subtitle, lang)} image="https://images.pexels.com/photos/19947936/pexels-photo-19947936.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" />
+      <PageHeader title={tr(t.about.title, lang)} subtitle={tr(t.about.subtitle, lang)} image="/assets/Images/BuildingView.jpg" />
       <section className="about-history section-pad">
         <div className="about-history-grid">
           <div className="about-history-text">
@@ -16,7 +16,7 @@ export default function About() {
             <p>{tr(t.about.historyP2, lang)}</p>
           </div>
           <div className="about-history-image">
-            <img src="https://images.pexels.com/photos/189295/pexels-photo-189295.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Lem Hotel lobby" />
+            <img src="/assets/Images/Coridor.jpg" alt="Lem Hotel lobby" />
           </div>
         </div>
       </section>

@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight, ChevronDown, Coffee, Play, Sparkles, Star, Utensils } from 'lucide-react';
 import { useLang } from '@/context/LangContext';
@@ -14,13 +15,38 @@ const photos = {
 
 export default function Home({ onBook }: { onBook: () => void }) {
   const { lang } = useLang();
+  const [heroIndex, setHeroIndex] = useState(0);
+
+  useEffect(() => {
+    setHeroIndex(0);
+  }, [lang]);
+
+  useEffect(() => {
+    const cycle = window.setInterval(() => {
+      setHeroIndex((current: number) => (current === 0 ? 1 : 0));
+    }, 4200);
+
+    return () => window.clearInterval(cycle);
+  }, []);
+
+  const heroLines = [tr(t.hero.title1, lang), tr(t.hero.welcome, lang)];
+
   return (
     <main>
       <section className="hero" style={{ backgroundImage: `url(${photos.hero})` }}>
         <div className="hero-overlay" />
         <div className="hero-content">
           <p className="eyebrow light">{tr(t.hero.eyebrow, lang)}</p>
-          <h1>{tr(t.hero.title1, lang)}<br /><em>{tr(t.hero.title2, lang)}</em></h1>
+          <h1 className="hero-title" aria-live="polite">
+            <span className="hero-title-rotator">
+              {heroLines.map((line, index) => (
+                <span key={`${line}-${lang}`} className={index === heroIndex ? 'hero-title-layer active' : 'hero-title-layer'}>
+                  {line}
+                </span>
+              ))}
+            </span>
+            <span className="hero-title-secondary"><em>{tr(t.hero.title2, lang)}</em></span>
+          </h1>
           <p className="hero-copy">{tr(t.hero.copy, lang)}</p>
           <div className="hero-actions">
             <button className="primary-button" onClick={onBook}>{tr(t.hero.cta1, lang)} <ArrowUpRight size={18} /></button>

@@ -123,6 +123,38 @@ img {
   z-index: 50;
 
   border-bottom: 1px solid rgba(231, 224, 213, 0.85);
+
+  transition:
+    transform 0.34s ease,
+    opacity 0.34s ease,
+    background 0.34s ease,
+    box-shadow 0.34s ease,
+    border-color 0.34s ease;
+}
+
+.nav-wrap.home-chrome {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  transform: translateY(-110%);
+  opacity: 0;
+  pointer-events: none;
+
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom-color: transparent;
+  box-shadow: none;
+}
+
+.nav-wrap.home-chrome.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 10px 28px rgba(7, 20, 38, 0.08);
+  border-bottom-color: rgba(231, 224, 213, 0.85);
 }
 
 .brand,
@@ -204,6 +236,10 @@ img {
   gap: 14px;
 }
 
+.mobile-nav-actions {
+  display: none;
+}
+
 .admin-trigger {
   background: none;
   color: #7d8790;
@@ -229,9 +265,11 @@ img {
 
   color: #fff;
 
-  padding: 13px 20px;
+  padding: 12px 18px;
   font-size: 12px;
   letter-spacing: 0.02em;
+  white-space: nowrap;
+  flex-shrink: 0;
 
   transition:
     transform 0.2s,
@@ -374,9 +412,17 @@ img {
   position: relative;
   z-index: 1;
 
-  padding: clamp(72px, 12vh, 120px) 11% 72px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
 
-  max-width: min(900px, 64vw);
+  padding: clamp(120px, 22vh, 180px) 8% 88px;
+
+  max-width: min(980px, 74vw);
+  margin: 0 auto;
 }
 
 .eyebrow {
@@ -410,6 +456,45 @@ img {
   margin: 0;
 }
 
+.hero-title {
+  display: grid;
+  justify-items: center;
+  gap: 0.1em;
+}
+
+.hero-title-rotator {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 1.15em;
+  min-width: 12ch;
+}
+
+.hero-title-layer {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0;
+  transform: translateY(24px) scale(0.985);
+  filter: blur(10px);
+
+  transition:
+    opacity 0.72s ease,
+    transform 0.72s ease,
+    filter 0.72s ease;
+}
+
+.hero-title-layer.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+.hero-title-secondary {
+  display: block;
+  animation: hero-title-rise 0.8s ease 0.15s both;
+}
+
 .hero h1 em,
 .footer-cta h2 em,
 .intro h2 em,
@@ -433,12 +518,17 @@ img {
   margin: 26px 0 30px;
 
   font-size: 16px;
+  animation: hero-fade-up 0.85s ease 0.22s both;
 }
 
 .hero-actions {
   display: flex;
   align-items: center;
   gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  animation: hero-fade-up 0.85s ease 0.32s both;
 }
 
 .play-button {
@@ -1265,7 +1355,7 @@ footer .footer-brand {
    ========================================================= */
 
 .floating-book {
-  display: none;
+  display: flex;
 
   position: fixed;
 
@@ -1280,7 +1370,7 @@ footer .footer-brand {
 
   color: #fff;
 
-  padding: 16px 32px;
+  padding: 14px 24px;
 
   font-size: 13px;
 
@@ -1292,12 +1382,23 @@ footer .footer-brand {
 
   border-radius: 50px;
 
+  opacity: 0;
+  transform: translateX(-50%) translateY(16px);
+  pointer-events: none;
+
   box-shadow:
     0 8px 25px rgba(7, 20, 38, 0.35);
 
   transition:
-    transform 0.2s,
+    transform 0.24s,
+    opacity 0.24s,
     background 0.2s;
+}
+
+.floating-book.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
 }
 
 .floating-book:hover {
@@ -3542,6 +3643,25 @@ footer .footer-brand {
     display: flex;
   }
 
+  .mobile-nav-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    padding-top: 12px;
+    margin-top: 4px;
+
+    border-top: 1px solid var(--line);
+  }
+
+  .mobile-nav-actions .admin-trigger {
+    display: flex;
+  }
+
+  .mobile-nav-actions .lang-switch {
+    display: block;
+  }
+
   .admin-trigger {
     display: none;
   }
@@ -3571,11 +3691,16 @@ footer .footer-brand {
   }
 
   .hero-content {
-    padding: 95px 8%;
+    padding: 128px 8% 92px;
+    max-width: 100%;
   }
 
   .hero h1 {
     font-size: 52px;
+  }
+
+  .hero-title-rotator {
+    min-width: 11ch;
   }
 
   .hero-copy {
@@ -3929,11 +4054,19 @@ footer .footer-brand {
   }
 
   .hero-actions {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
   }
 
   .play-button {
-    margin-top: 18px;
+    margin-top: 0;
+  }
+
+  .floating-book {
+    bottom: 14px;
+    width: calc(100% - 28px);
+    justify-content: center;
   }
 
   .intro {

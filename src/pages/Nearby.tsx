@@ -4,6 +4,8 @@ import { useLang } from '@/context/LangContext';
 import { t, tr, nearbySites } from '@/data/content';
 import { PageHeader } from '@/components/Layout';
 
+const fallbackAttractionImage = '/assets/Images/LemHotelVenue.jpg';
+
 export default function Nearby() {
   const { lang } = useLang();
   const [activeSite, setActiveSite] = useState<number | null>(null);
@@ -39,7 +41,16 @@ export default function Nearby() {
           {nearbySites.map((site, i) => (
             <article key={i} className={`nearby-card ${i % 2 === 1 ? 'reverse' : ''}`}>
               <div className="nearby-card-image">
-                <img src={site.image} alt={tr(site.name, lang)} />
+                <img
+                  src={site.image}
+                  alt={tr(site.name, lang)}
+                  onError={(event) => {
+                    const image = event.currentTarget;
+                    if (image.dataset.fallbackApplied === 'true') return;
+                    image.dataset.fallbackApplied = 'true';
+                    image.src = fallbackAttractionImage;
+                  }}
+                />
                 <button className="nearby-image-trigger" onClick={() => openGallery(i)}>{tr(t.nearby.photos, lang)}</button>
               </div>
               <div className="nearby-card-body">
@@ -74,13 +85,31 @@ export default function Nearby() {
             <p className="nearby-modal-subtitle">{tr(selectedSite.desc, lang)}</p>
 
             <div className="nearby-modal-main-image">
-              <img src={siteImages[activeImage]} alt={tr(selectedSite.name, lang)} />
+              <img
+                src={siteImages[activeImage]}
+                alt={tr(selectedSite.name, lang)}
+                onError={(event) => {
+                  const image = event.currentTarget;
+                  if (image.dataset.fallbackApplied === 'true') return;
+                  image.dataset.fallbackApplied = 'true';
+                  image.src = fallbackAttractionImage;
+                }}
+              />
             </div>
 
             <div className="nearby-modal-thumbs">
               {siteImages.map((image, index) => (
                 <button key={image} className={index === activeImage ? 'active' : ''} onClick={() => setActiveImage(index)}>
-                  <img src={image} alt={`${tr(selectedSite.name, lang)} ${index + 1}`} />
+                  <img
+                    src={image}
+                    alt={`${tr(selectedSite.name, lang)} ${index + 1}`}
+                    onError={(event) => {
+                      const thumb = event.currentTarget;
+                      if (thumb.dataset.fallbackApplied === 'true') return;
+                      thumb.dataset.fallbackApplied = 'true';
+                      thumb.src = fallbackAttractionImage;
+                    }}
+                  />
                 </button>
               ))}
             </div>

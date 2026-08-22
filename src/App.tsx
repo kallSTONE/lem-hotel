@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { LangProvider } from '@/context/LangContext';
 import { Navbar, Footer, FloatingBookButton, BookingModal } from '@/components/Layout';
@@ -18,8 +18,22 @@ function ScrollToTop() {
 
 function SiteLayout() {
   const [bookingOpen, setBookingOpen] = useState(false);
+  const [chromeVisible, setChromeVisible] = useState(true);
   const location = useLocation();
   const isAdmin = location.pathname.startsWith('/admin');
+  const isHome = location.pathname === '/';
+
+  useEffect(() => {
+    if (!isHome) {
+      setChromeVisible(true);
+      return;
+    }
+
+    const onScroll = () => setChromeVisible(window.scrollY > 24);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [isHome]);
 
   if (isAdmin) {
     return (
@@ -31,7 +45,7 @@ function SiteLayout() {
 
   return (
     <>
-      <Navbar onBook={() => setBookingOpen(true)} />
+      <Navbar onBook={() => setBookingOpen(true)} chromeVisible={chromeVisible || !isHome} />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home onBook={() => setBookingOpen(true)} />} />
@@ -42,7 +56,7 @@ function SiteLayout() {
         <Route path="/nearby" element={<Nearby />} />
       </Routes>
       <Footer />
-      <FloatingBookButton onBook={() => setBookingOpen(true)} />
+      <FloatingBookButton onBook={() => setBookingOpen(true)} visible={chromeVisible || !isHome} />
       <BookingModal open={bookingOpen} onClose={() => setBookingOpen(false)} />
     </>
   );

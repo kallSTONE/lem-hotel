@@ -1,4 +1,4 @@
-import { useState, FormEvent, ReactNode } from 'react';
+import { useState, useEffect, FormEvent, ReactNode } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ArrowUpRight, Bell, Check, ChevronDown, Globe, LayoutDashboard, Menu, X } from 'lucide-react';
 import { useLang } from '@/context/LangContext';
@@ -78,7 +78,7 @@ export function LanguageSwitch() {
   );
 }
 
-export function Navbar({ onBook }: { onBook: () => void }) {
+export function Navbar({ onBook, chromeVisible }: { onBook: () => void; chromeVisible: boolean }) {
   const { lang } = useLang();
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
@@ -92,7 +92,7 @@ export function Navbar({ onBook }: { onBook: () => void }) {
   ];
   return (
     <>
-      <header className="nav-wrap">
+      <header className={`nav-wrap ${location.pathname === '/' ? 'home-chrome' : ''} ${chromeVisible ? 'is-visible' : 'is-hidden'}`}>
         <Link className="brand" to="/">
           <img src="/image.png" alt="Lem Hotel" />
           <span>LEM HOTEL<small>HOSSANA · ETHIOPIA</small></span>
@@ -103,6 +103,12 @@ export function Navbar({ onBook }: { onBook: () => void }) {
               {item.label}
             </Link>
           ))}
+          <div className="mobile-nav-actions">
+            <LanguageSwitch />
+            <Link className="admin-trigger mobile-admin-trigger" to="/admin" onClick={() => setMenuOpen(false)}>
+              <LayoutDashboard size={15} /> {tr(t.nav.staff, lang)}
+            </Link>
+          </div>
         </nav>
         <div className="nav-actions">
           <LanguageSwitch />
@@ -133,10 +139,10 @@ export function Footer() {
   );
 }
 
-export function FloatingBookButton({ onBook }: { onBook: () => void }) {
+export function FloatingBookButton({ onBook, visible }: { onBook: () => void; visible: boolean }) {
   const { lang } = useLang();
   return (
-    <button className="floating-book" onClick={onBook}>
+    <button className={`floating-book ${visible ? 'visible' : ''}`} onClick={onBook}>
       {tr(t.nav.book, lang)} <ArrowUpRight size={18} />
     </button>
   );

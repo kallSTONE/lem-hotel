@@ -466,7 +466,7 @@ img {
   position: relative;
   display: grid;
   place-items: center;
-  min-height: 1.15em;
+  min-height: 2.2em;
   min-width: 12ch;
 }
 

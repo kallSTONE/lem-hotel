@@ -62,7 +62,6 @@ export default function Home({ onBook }: { onBook: () => void }) {
               ))}
             </span>
           </h1>
-
           <p className="hero-copy">{tr(t.hero.copy, lang)}</p>
           <div className="hero-actions">
             <button className="primary-button" onClick={onBook}>{tr(t.hero.cta1, lang)} <ArrowUpRight size={18} /></button>

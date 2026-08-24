@@ -4,7 +4,7 @@ import { useLang } from '@/context/LangContext';
 import { t, tr, nearbySites } from '@/data/content';
 import { PageHeader } from '@/components/Layout';
 
-const fallbackAttractionImage = '/assets/Images/attractions/LemHotelVenue.jpg';
+const fallbackAttractionImage = '/assets/Images/attractions/ajoras.jpg';
 
 export default function Nearby() {
   const { lang } = useLang();

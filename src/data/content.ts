@@ -149,12 +149,12 @@ export const nearbySites = [
     distance: '18 km',
     image: '/assets/images/attractions/ajora.jpg',
     images: [
-      '/assets/images/attractions/ajora.jpg',
-      '/assets/images/attractions/ajorawaterfall1.jpg',
-      '/assets/images/attractions/ajorawaterfall2.jpg',
-      '/assets/images/attractions/ajora4.jpg',
-      '/assets/images/attractions/ajora6.jpg',
-      '/assets/images/attractions/ajoras.jpg',
+      '/assets/Images/attractions/ajora.jpg',
+      '/assets/Images/attractions/ajorawaterfall1.jpg',
+      '/assets/Images/attractions/ajorawaterfall2.jpg',
+      '/assets/Images/attractions/ajora4.jpg',
+      '/assets/Images/attractions/ajora6.jpg',
+      '/assets/Images/attractions/ajoras.jpg',
     ],
   },
   {

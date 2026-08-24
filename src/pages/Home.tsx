@@ -3,23 +3,23 @@ import { Link } from 'react-router-dom';
 import { ArrowUpRight, ChevronDown, Coffee, Play, Sparkles, Star, Utensils } from 'lucide-react';
 import { useLang } from '@/context/LangContext';
 import { t, tr, rooms } from '@/data/content';
-
+   
 const photos = {
   hero: '/assets/Images/welcome.png',
-  room: '/assets/Images/img3.jpg',
-  roomTwo: '/assets/Images/img2.jpg',
-  dining: '/assets/Images/LemHotelVenue.jpg',
-  pool: '/assets/Images/NightView.jpg',
-  spa: '/assets/Images/Stage.jpg',
-};
-
+  room: '/assets/Images/img3.jpg', 
+  roomTwo: '/assets/Images/img2.jpg', 
+  dining: '/assets/Images/LemHotelVenue.jpg', 
+  pool: '/assets/Images/NightView.jpg', 
+  spa: '/assets/Images/Stage.jpg', 
+};    
+   
 export default function Home({ onBook }: { onBook: () => void }) {
   const { lang } = useLang();
   const [heroIndex, setHeroIndex] = useState(0);
-
+   
   useEffect(() => {
     setHeroIndex(0);
-  }, [lang]);
+  }, [lang]);   
 
   useEffect(() => {
     const cycle = window.setInterval(() => {

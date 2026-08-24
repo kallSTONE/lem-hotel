@@ -3,9 +3,9 @@ import { X } from 'lucide-react';
 import { useLang } from '@/context/LangContext';
 import { t, tr, galleryImages } from '@/data/content';
 import { PageHeader } from '@/components/Layout';
-
+  
 type Filter = 'all' | 'rooms' | 'dining' | 'amenities';
-
+   
 export default function Gallery() {
   const { lang } = useLang();
   const [filter, setFilter] = useState<Filter>('all');

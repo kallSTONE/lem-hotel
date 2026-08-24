@@ -7,10 +7,10 @@ export function tr(obj: Record<string, string>, lang: Lang) {
 export const rooms = [
   {
     id: 'executive-suite',
-    name: { en: 'Executive Suite', am: 'አገር አስተዳደር ሱፕ', had: 'Executive Suite' },
+    name: { en: 'Executive Suite', am: 'የአስተዳደር ቅበላ', had: 'Executive Suite' },
     desc: {
       en: 'A spacious suite with a king bed, separate sitting area, and panoramic city views. Designed for longer stays and quiet evenings.',
-      am: 'ትልቅ አሞሌ የንጉስ አልጋ፣ የተለየ የመቀመጫ ክፍል እና የከተማ እይታ አለው።',
+      am: 'ትልቅ የንጉስ አልጋ፣ የተለየ የመቀመጫ ክፍል እና የከተማ እይታ አለው።',
       had: 'EkkoSuite giddo king bed, sitting area, city view xaadooshshi.',
     },
     price: 4850,
@@ -229,9 +229,9 @@ export const t = {
     title2: { en: 'Feel at home.', am: 'እንደ ቤትዎ ይሰማዎ።', had: 'Lampe geeshsha.' },
     welcome: { en: 'Welcome to Lem.', am: 'ወደ ሌም እንኳን በደህና መጡ።', had: 'Lem gidaa welcome.' },
     copy: { en: 'A quiet, considered hotel in the heart of Hossana. Come for the view, stay for the warmth.', am: 'በሆሳዕና ልብ ውስጥ ቅንነት ያለው ሆቴል።', had: 'Hossana giddo quiet hotel.' },
-    cta1: { en: 'Find your room', am: 'ክፍልዎን ያግኙ', had: 'Baatta kaawi' },
+    cta1: { en: 'Find your room', am: 'አልጋዎን ያግኙ', had: 'Baatta kaawi' },
     cta2: { en: 'Watch our story', am: 'ታሪካችንን ይመልከቱ', had: 'Story aayi' },
-    scroll: { en: 'Scroll to explore', am: 'ለመመልከት ያሸብልሉ', had: 'Xiiwa aayi' },
+    scroll: { en: 'Scroll to explore', am: 'ወደታች', had: 'Xiiwa aayi' },
   },
   booking: {
     checkin: { en: 'Check in', am: 'ግባ', had: 'Gala' },

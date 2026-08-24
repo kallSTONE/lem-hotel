@@ -5,7 +5,7 @@ import { useLang } from '@/context/LangContext';
 import { t, tr, rooms } from '@/data/content';
    
 const photos = {
-  heroMobile: '/assets/Images/welcome-phone.png',
+  heroMobile: '/assets/Images/welcome-Phone.png',
   hero: '/assets/Images/welcome.png',
   room: '/assets/Images/img3.jpg', 
   roomTwo: '/assets/Images/img2.jpg', 

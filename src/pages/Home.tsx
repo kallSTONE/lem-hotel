@@ -29,7 +29,10 @@ export default function Home({ onBook }: { onBook: () => void }) {
     return () => window.clearInterval(cycle);
   }, []);
 
-  const heroLines = [tr(t.hero.title1, lang), tr(t.hero.welcome, lang)];
+  const heroLines = [
+    tr(t.hero.title1, lang), 
+    tr(t.hero.welcome, lang)
+  ];
 
   return (
     <main>
@@ -40,13 +43,26 @@ export default function Home({ onBook }: { onBook: () => void }) {
           <h1 className="hero-title" aria-live="polite">
             <span className="hero-title-rotator">
               {heroLines.map((line, index) => (
-                <span key={`${line}-${lang}`} className={index === heroIndex ? 'hero-title-layer active' : 'hero-title-layer'}>
+                <span
+                  key={`${line}-${lang}`}
+                  className={
+                    index === heroIndex
+                      ? 'hero-title-layer active'
+                      : 'hero-title-layer'
+                  }
+                >
                   {line}
+
+                  {index === 0 && (
+                    <span className="hero-title-secondary">
+                      <em>{tr(t.hero.title2, lang)}</em>
+                    </span>
+                  )}
                 </span>
               ))}
             </span>
-            <span className="hero-title-secondary"><em>{tr(t.hero.title2, lang)}</em></span>
           </h1>
+
           <p className="hero-copy">{tr(t.hero.copy, lang)}</p>
           <div className="hero-actions">
             <button className="primary-button" onClick={onBook}>{tr(t.hero.cta1, lang)} <ArrowUpRight size={18} /></button>

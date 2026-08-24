@@ -389,6 +389,7 @@ img {
   height: min(720px, calc(100vh - 80px));
   min-height: 580px;
 
+  background-image: var(--hero-desktop);
   background-size: cover;
   background-position: center;
 
@@ -3684,12 +3685,13 @@ footer .footer-brand {
   }
 
   .hero {
-    height: 600px;
+    height: min(700px, 88vh);
+    min-height: 620px;
 
-    min-height: auto;
-
-    background-position: 62% center;
+    background-image: var(--hero-mobile);
+    background-position: center;
   }
+
 
   .hero-content {
     padding: 128px 8% 92px;

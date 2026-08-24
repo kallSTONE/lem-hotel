@@ -5,6 +5,7 @@ import { useLang } from '@/context/LangContext';
 import { t, tr, rooms } from '@/data/content';
    
 const photos = {
+  heroMobile: '/assets/Images/welcome-phone.jpg',
   hero: '/assets/Images/welcome.png',
   room: '/assets/Images/img3.jpg', 
   roomTwo: '/assets/Images/img2.jpg', 
@@ -12,7 +13,11 @@ const photos = {
   pool: '/assets/Images/NightView.jpg', 
   spa: '/assets/Images/Stage.jpg', 
 };    
-   
+   const photos = {
+  hero: '/images/hero-desktop.jpg',
+  heroMobile: '/images/hero-mobile.jpg',
+};
+
 export default function Home({ onBook }: { onBook: () => void }) {
   const { lang } = useLang();
   const [heroIndex, setHeroIndex] = useState(0);
@@ -36,7 +41,13 @@ export default function Home({ onBook }: { onBook: () => void }) {
 
   return (
     <main>
-      <section className="hero" style={{ backgroundImage: `url(${photos.hero})` }}>
+      <section
+        className="hero"
+        style={{
+          '--hero-desktop': `url(${photos.hero})`,
+          '--hero-mobile': `url(${photos.heroMobile})`,
+        }}
+      >
         <div className="hero-overlay" />
         <div className="hero-content">
           <p className="eyebrow light">{tr(t.hero.eyebrow, lang)}</p>

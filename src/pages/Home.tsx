@@ -12,11 +12,7 @@ const photos = {
   dining: '/assets/Images/LemHotelVenue.jpg', 
   pool: '/assets/Images/NightView.jpg', 
   spa: '/assets/Images/Stage.jpg', 
-};    
-   const photos = {
-  hero: '/images/hero-desktop.jpg',
-  heroMobile: '/images/hero-mobile.jpg',
-};
+};   
 
 export default function Home({ onBook }: { onBook: () => void }) {
   const { lang } = useLang();

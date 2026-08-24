@@ -29,10 +29,24 @@ function SiteLayout() {
       return;
     }
 
-    const onScroll = () => setChromeVisible(window.scrollY > 24);
-    onScroll();
+    // Hide header when first arriving at home.
+    setChromeVisible(false);
+
+    const onScroll = () => {
+      if (window.scrollY > 24) {
+        // Once revealed, keep it visible.
+        setChromeVisible(true);
+
+        // We don't need to track scrolling anymore.
+        window.removeEventListener('scroll', onScroll);
+      }
+    };
+
     window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+    };
   }, [isHome]);
 
   if (isAdmin) {
@@ -45,8 +59,13 @@ function SiteLayout() {
 
   return (
     <>
-      <Navbar onBook={() => setBookingOpen(true)} chromeVisible={chromeVisible || !isHome} />
+      <Navbar
+        onBook={() => setBookingOpen(true)}
+        chromeVisible={chromeVisible || !isHome}
+      />
+
       <ScrollToTop />
+
       <Routes>
         <Route path="/" element={<Home onBook={() => setBookingOpen(true)} />} />
         <Route path="/rooms" element={<Rooms onBook={() => setBookingOpen(true)} />} />
@@ -55,12 +74,22 @@ function SiteLayout() {
         <Route path="/about" element={<About />} />
         <Route path="/nearby" element={<Nearby />} />
       </Routes>
+
       <Footer />
-      <FloatingBookButton onBook={() => setBookingOpen(true)} visible={chromeVisible || !isHome} />
-      <BookingModal open={bookingOpen} onClose={() => setBookingOpen(false)} />
+
+      <FloatingBookButton
+        onBook={() => setBookingOpen(true)}
+        visible={chromeVisible || !isHome}
+      />
+
+      <BookingModal
+        open={bookingOpen}
+        onClose={() => setBookingOpen(false)}
+      />
     </>
   );
 }
+
 
 function App() {
   return (

@@ -7,11 +7,11 @@ import { t, tr, rooms } from '@/data/content';
 const photos = {
   heroMobile: '/assets/Images/welcome-Phone.webp',
   hero: '/assets/Images/welcome.webp',
-  room: '/assets/Images/img3.jpg', 
-  roomTwo: '/assets/Images/img2.jpg', 
-  dining: '/assets/Images/LemHotelVenue.jpg', 
-  pool: '/assets/Images/NightView.jpg', 
-  spa: '/assets/Images/Stage.jpg', 
+  room: '/assets/Images/img3.webp', 
+  roomTwo: '/assets/Images/img2.webp', 
+  dining: '/assets/Images/LemHotelVenue.webp', 
+  pool: '/assets/Images/NightView.webp', 
+  spa: '/assets/Images/Stage.webp', 
 };   
 
 export default function Home({ onBook }: { onBook: () => void }) {

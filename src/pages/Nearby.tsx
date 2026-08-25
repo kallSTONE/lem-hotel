@@ -31,7 +31,7 @@ export default function Nearby() {
   }, []);
 
   const selectedSite = activeSite !== null ? nearbySites[activeSite] : null;
-  const siteImages = selectedSite?.images ?? (selectedSite ? [selectedSite.image] : []);
+  const siteImages = selectedSite?.Images ?? (selectedSite ? [selectedSite.image] : []);
 
   return (
     <main>

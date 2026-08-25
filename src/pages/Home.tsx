@@ -6,7 +6,7 @@ import { t, tr, rooms } from '@/data/content';
    
 const photos = {
   heroMobile: '/assets/Images/welcome-Phone.webp',
-  hero: '/assets/Images/welcome.png',
+  hero: '/assets/Images/welcome.webp',
   room: '/assets/Images/img3.jpg', 
   roomTwo: '/assets/Images/img2.jpg', 
   dining: '/assets/Images/LemHotelVenue.jpg', 

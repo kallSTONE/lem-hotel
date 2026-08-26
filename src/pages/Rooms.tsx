@@ -9,7 +9,7 @@ export default function Rooms({ onBook }: { onBook: () => void }) {
     <main>
       <PageHeader title={tr(t.rooms.title, lang)} subtitle={tr(t.rooms.subtitle, lang)} image={rooms[0].image} />
       <section className="rooms-list section-pad">
-        <div className="rooms-grid">
+        <div className="rooms-grid">   
           {rooms.map((room, i) => (
             <article key={room.id} className={room.available ? 'room-detail-card' : 'room-detail-card unavailable'}>
               <div className="room-detail-image">

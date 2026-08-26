@@ -16,7 +16,7 @@ export default function Menu() {
     const matchSearch = tr(item.name, lang).toLowerCase().includes(search.toLowerCase()) || tr(item.desc, lang).toLowerCase().includes(search.toLowerCase());
     return matchCat && matchSearch;
   });
-
+  
   return (
     <main>
       <PageHeader title={tr(t.menu.title, lang)} subtitle={tr(t.menu.subtitle, lang)} image="/assets/Images/LemHotelVenue.jpg" />

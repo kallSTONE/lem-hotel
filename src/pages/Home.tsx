@@ -13,7 +13,7 @@ const photos = {
   pool: '/assets/Images/NightView.webp', 
   spa: '/assets/Images/Stage.webp', 
 };   
-
+     
 export default function Home({ onBook }: { onBook: () => void }) {
   const { lang } = useLang();
   const [heroIndex, setHeroIndex] = useState(0);

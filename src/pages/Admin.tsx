@@ -17,7 +17,7 @@ type Review = { id: number; guest: string; rating: number; text: string; date: s
 
 const initialBookings: Booking[] = [
   { id: 1, guest: 'Dawit Alemu', room: 'Executive Suite', dates: 'Aug 21 – Aug 24', status: 'Confirmed' },
-  { id: 2, guest: 'Hanna Tesfaye', room: 'Deluxe King', dates: 'Aug 22 – Aug 25', status: 'Pending' },
+  { id: 2, guest: 'Hanna Belay', room: 'Deluxe King', dates: 'Aug 22 – Aug 25', status: 'Pending' },
   { id: 3, guest: 'Michael Chen', room: 'Classic Twin', dates: 'Aug 23 – Aug 27', status: 'Confirmed' },
   { id: 4, guest: 'Sara Mohammed', room: 'Family Room', dates: 'Aug 24 – Aug 28', status: 'Pending' },
   { id: 5, guest: 'Yonas Bekele', room: 'Presidential Suite', dates: 'Aug 25 – Aug 30', status: 'Confirmed' },

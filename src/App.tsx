@@ -36,7 +36,7 @@ function SiteLayout() {
       if (window.scrollY > 24) {
         // Once revealed, keep it visible.
         setChromeVisible(true);
-
+   
         // We don't need to track scrolling anymore.
         window.removeEventListener('scroll', onScroll);
       }

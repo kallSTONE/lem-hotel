@@ -26,7 +26,7 @@ export default function Rooms({ onBook }: { onBook: () => void }) {
                     {tr(t.rooms.from, lang)} <strong>ETB {room.price.toLocaleString()}</strong>
                     <small>{tr(t.rooms.perNight, lang)}</small>
                   </div>
-                </div>
+                </div>   
                 <p className="room-detail-desc">{tr(room.desc, lang)}</p>
                 <div className="room-detail-meta">
                   <span>{room.bed}</span>

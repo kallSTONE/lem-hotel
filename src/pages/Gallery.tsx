@@ -26,7 +26,7 @@ export default function Gallery() {
         <div className="gallery-filters">
           {filters.map(f => (
             <button key={f.key} className={filter === f.key ? 'active' : ''} onClick={() => setFilter(f.key)}>{f.label}</button>
-          ))}
+          ))}   
         </div>
         <div className="gallery-masonry">
           {filtered.map((img, i) => (

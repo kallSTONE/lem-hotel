@@ -18,7 +18,7 @@ export default function Gallery() {
     { key: 'dining', label: tr(t.gallery.dining, lang) },
     { key: 'amenities', label: tr(t.gallery.amenities, lang) },
   ];
-
+ 
   return (
     <main>
       <PageHeader title={tr(t.gallery.title, lang)} subtitle={tr(t.gallery.subtitle, lang)} image={galleryImages[0].url} />

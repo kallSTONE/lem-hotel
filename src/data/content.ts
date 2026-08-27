@@ -177,6 +177,7 @@ export const nearbySites = [
     image: '/assets/Images/attractions/shenqola.jpg',
     Images: ['/assets/Images/attractions/shenqola.jpg'],
   },
+  
   {
     name: { en: 'Ambericho Mountain', am: 'አምበሪቾ ተራራ', had: 'Ambericho Tulla' },
     desc: { en: 'One of the region\'s iconic mountain destinations, ideal for panoramic viewpoints and weekend drives.', am: 'የአካባቢው ታዋቂ ተራራ ቦታ፣ ለረጅም እይታ ተስማሚ።', had: 'Iconic mountain with wide panoramic views.' },

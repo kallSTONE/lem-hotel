@@ -3687,10 +3687,10 @@ footer .footer-brand {
   .hero {
     height: min(700px, 88vh);
     min-height: 620px;
-
+  
     background-image: var(--hero-mobile);
     background-position: center;
-  }
+  } 
 
 
   .hero-content {

@@ -3683,7 +3683,7 @@ footer .footer-brand {
   .floating-book {
     display: flex;
   }
-
+  
   .hero {
     height: min(700px, 88vh);
     min-height: 620px;

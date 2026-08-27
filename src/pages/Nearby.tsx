@@ -96,7 +96,7 @@ export default function Nearby() {
                 }}
               />
             </div>
-
+  
             <div className="nearby-modal-thumbs">
               {siteImages.map((image, index) => (
                 <button key={image} className={index === activeImage ? 'active' : ''} onClick={() => setActiveImage(index)}>
@@ -119,3 +119,4 @@ export default function Nearby() {
     </main>
   );
 }
+  

@@ -10,7 +10,7 @@ import { t, tr, rooms } from '@/data/content';
 import { BookingModal } from '@/components/Layout';
 
 type AdminPage = 'overview' | 'bookings' | 'tables' | 'reviews' | 'announcements' | 'rooms' | 'settings';
-
+   
 type Booking = { id: number; guest: string; room: string; dates: string; status: 'Confirmed' | 'Pending' };
 type TableRes = { id: number; name: string; size: number; time: string; status: 'Seated' | 'Waiting' | 'Reserved' };
 type Review = { id: number; guest: string; rating: number; text: string; date: string };

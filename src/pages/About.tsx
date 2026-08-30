@@ -5,8 +5,8 @@ import { PageHeader } from '@/components/Layout';
 export default function About() {
   const { lang } = useLang();
   return (
-    <main>
-      <PageHeader title={tr(t.about.title, lang)} subtitle={tr(t.about.subtitle, lang)} image="/assets/Images/BuildingView.jpg" />
+    <main> 
+      <Page Header  title={tr(t.about.title, lang)} subtitle={tr(t.about.subtitle, lang)} image="/assets/Images/BuildingView.jpg" />
       <section className="about-history section-pad">
         <div className="about-history-grid">
           <div className="about-history-text">

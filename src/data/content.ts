@@ -137,15 +137,15 @@ export const galleryImages = [
 
 export const staff = [
   { name: 'Tadesse Bekele', role: { en: 'General Manager', am: 'ዋና አስተዳዳሪ', had: 'General Manager' }, image: '/assets/Images/InfluencerPhotoinlemhotel.jpg', bio: { en: 'Twenty years in Ethiopian hospitality. Tadesse believes every guest is family.', am: 'ለሀያ ዓመታት በኢትዮጵያ መስተንግዶ።', had: '20 years hospitality.' } },
-  { name: 'Helen Girma', role: { en: 'Head Chef', am: 'ዋና ሼፍ', had: 'Head Chef' }, image: '/assets/Images/photo0jpg.jpg', bio: { en: 'Helen brings Hossana\'s flavours to every plate. Trained in Addis Ababa and Florence.', am: 'የሆሳዕናን ጣዕሞች ወደ ስልት ታስተላልፋለች።', had: 'Hossana flavours, trained Addis & Florence.' } },
-  { name: 'Solomon Abera', role: { en: 'Guest Relations', am: 'የእንግድ ግንኙነት', had: 'Guest Relations' }, image: '/assets/Images/LemHotelCertificates.jpg', bio: { en: 'Solomon knows Hossana\'s every corner and loves sharing hidden gems with guests.', am: 'ሰሎሞን የሆሳዕናን ሁሉንም ጥልቅ ይወቃል።', had: 'Knows Hossana well.' } },
+  { name: 'Helen Girma', role: { en: 'Head Chef', am: 'ዋና ሼፍ', had: 'Head Chef' }, image: '/assets/Images/photo0jpg.jpg', bio: { en: 'Helen brings Hossana\'s flavours to every plate. Trained in Addis Ababa and Florence.', am: 'የሆሳዕናን ጣዕሞች ወደ ማዕድነት ትቀይራለች።', had: 'Hossana flavours, trained Addis & Florence.' } },
+  { name: 'Solomon Abera', role: { en: 'Guest Relations', am: 'የእንግዶች ግንኙነት', had: 'Guest Relations' }, image: '/assets/Images/LemHotelCertificates.jpg', bio: { en: 'Solomon knows Hossana\'s every corner and loves sharing hidden gems with guests.', am: 'ሰሎሞን የሆሳዕናን ሁሉንም ጥልቅ ይወቃል።', had: 'Knows Hossana well.' } },
   { name: 'Marta Tola', role: { en: 'Housekeeping Manager', am: 'የቤት ጥበቃ አስተዳዳሪ', had: 'Housekeeping Manager' }, image: '/assets/Images/LemHotelTophies.jpg', bio: { en: 'Marta leads our housekeeping team with a quiet, meticulous care.', am: 'ማርታ የቤት ጥበቃ ቡድንን ትመራለች።', had: 'Leads housekeeping team.' } },
 ];
 
 export const nearbySites = [
   {
-    name: { en: 'Ajora Waterfall', am: 'አጆራ ውሃ መንጭ', had: 'Ajora Fisha' },
-    desc: { en: 'A stunning twin waterfall nestled in the Hossana countryside. A short drive from the hotel, best visited in the morning light.', am: 'በሆሳዕና አካባቢ ያለ ትልቅ የውሃ መንጭ።', had: 'Twin waterfall near Hossana.' },
+    name: { en: 'Ajora Waterfall', am: 'አጆራ ፏፏቴ', had: 'Ajora Fisha' },
+    desc: { en: 'A stunning twin waterfall nestled in the Hossana countryside. A short drive from the hotel, best visited in the morning light.', am: 'በሆሳዕና አካባቢ ያለ ትልቅ መንትያ የውሃ ፏፏቴ።', had: 'Twin waterfall near Hossana.' },
     distance: '18 km',
     image: '/assets/Images/attractions/ajora.webp',
     Images: [

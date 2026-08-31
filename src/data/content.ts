@@ -158,7 +158,7 @@ export const nearbySites = [
     ],
   },
   {
-    name: { en: 'Tiya Stones', am: 'ጥያ ድንጋዮች', had: 'Tiya Stones' },
+    name: { en: 'Tiya Stones', am: 'ጥያ ትክል ድንጋዮች', had: 'Tiya Stones' },
     desc: { en: 'A UNESCO World Heritage Site — ancient stelae carved with mysterious symbols, dating back to the 10th century.', am: 'የዩኔስኮ የዓለም ቅርስ — ጥንታዊ ድንጋዮች።', had: 'UNESCO site, ancient stelae.' },
     distance: '85 km',
     image: '/assets/Images/attractions/tiya.jpg',
@@ -172,7 +172,7 @@ export const nearbySites = [
   },
   {
     name: { en: 'Shenkola Mountain', am: 'ሸንቆላ ተራራ', had: 'Shenkola Tulla' },
-    desc: { en: 'A scenic mountain landscape outside Hossana, known for sunrise views and fresh highland air.', am: 'ከሆሳዕና ውጪ የሚገኝ ውብ ተራራ እና የንጋት እይታ።', had: 'Mountain view area with cool highland air.' },
+    desc: { en: 'A scenic mountain landscape outside Hossana, known for sunrise views and fresh highland air.', am: 'ከሆሳዕና በቅርብ ርቀት የሚገኝ ውብ ተራራ እና የንጋት እይታ።', had: 'Mountain view area with cool highland air.' },
     distance: '27 km',
     image: '/assets/Images/attractions/shenqola.jpg',
     Images: ['/assets/Images/attractions/shenqola.jpg'],
@@ -190,14 +190,14 @@ export const nearbySites = [
     ],
   },
   {
-    name: { en: 'Bezabih Petros Site', am: 'በዛብህ ጴጥሮስ ቦታ', had: 'Bezabih Petros' },
-    desc: { en: 'A notable local landmark connected to the area\'s culture and history, often visited during local tours.', am: 'ከአካባቢው ባህል እና ታሪክ ጋር የተያያዘ የታወቀ ቦታ።', had: 'Known local landmark tied to culture and history.' },
+    name: { en: 'Bezabih Petros Site', am: 'በዛብህ ጴጥሮስ የክብር ሀውልት', had: 'Bezabih Petros' },
+    desc: { en: 'A notable local landmark connected to the area\'s culture and history, often visited during local tours.', am: 'ከአካባቢው ባህል እና ታሪክ ጋር በተያያዘ የታወቀ ቦታ።', had: 'Known local landmark tied to culture and history.' },
     distance: '16 km',
     image: '/assets/Images/attractions/bezabihpetros.jpg',
     Images: ['/assets/Images/attractions/bezabihpetros.jpg'],
   },
   {
-    name: { en: 'Hossana Market', am: 'የሆሳዕና ገበያ', had: 'Hossana Market' },
+    name: { en: 'Hossana Market', am: 'የሆሳዕና ቅዳሜ ገበያ', had: 'Hossana Market' },
     desc: { en: 'The vibrant heart of Hossana — spices, textiles, and fresh produce. Open daily, busiest on Saturdays.', am: 'የሆሳዕና ህይወት ማዕከል — ቅመሞች እና ጨርቆች።', had: 'Spices, textiles, fresh produce.' },
     distance: '2 km',
     image: '/assets/Images/LemHotelVenue.jpg',

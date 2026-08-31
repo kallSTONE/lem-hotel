@@ -42,7 +42,7 @@ export const rooms = [
     name: { en: 'Classic Twin', am: 'ክላሲክ መንታ', had: 'Classic Twin' },
     desc: {
       en: 'Two comfortable twin beds in a bright, airy room. Ideal for friends or family travelling together.',
-      am: 'ሁለት ምርጥ መንታ አልጋዎች በብርሃን ክፍል ውስጥ።',
+      am: 'ሁለት ምርጥ መንታ አልጋዎች በአንድ ክፍል ውስጥ።',
       had: 'Lame twin bed qoodi, bright room giddo.',
     },
     price: 2850,
@@ -74,7 +74,7 @@ export const rooms = [
     name: { en: 'Presidential Suite', am: 'የፕሬዝዳንት ሱፕ', had: 'Presidential Suite' },
     desc: {
       en: 'Our finest suite — a king bedroom, private dining area, and a terrace overlooking the Hossana hills. The ultimate Lem experience.',
-      am: 'ታላቁ ሱፓችን — የንጉስ አልጋ፣ የግል አብራራ እና የሆሳዕና ኮረብታ እይታ ቴራሳ።',
+      am: 'ታላቁና ምርጡ ቅበላችን — የንጉስ አልጋ፣ የግል መመገቢያ እና የሆሳዕና ኮረብታ እይታ ያለው በረንዳ።',
       had: 'Bishan suite — king bed, private dining, terrace hill view.',
     },
     price: 7200,
@@ -112,7 +112,7 @@ export const menuItems = [
   { id: 'm4', name: { en: 'Kitfo', am: 'ኪጦ ፎ', had: 'Kitfo' }, desc: { en: 'Minced raw beef seasoned with mitmita and niter kibbeh. A delicacy for the adventurous.', am: 'በሚጥሚጣ የተቀመመ የተከተፈ ሥጋ።', had: 'Raw beef, mitmita, kibbeh.' }, price: 680, category: 'dinner' as MenuCategory, image: '/assets/Images/lemhotelbar2.jpg', tags: ['signature'] },
   { id: 'm5', name: { en: 'Firfir', am: 'ፍርፍር', had: 'Firfir' }, desc: { en: 'Shredded injera tossed in spiced berbere sauce with onion and butter. A classic breakfast.', am: 'የተቀቀለ እንጀራ ከበርበሬ ጋር።', had: 'Shredded injera, berbere.' }, price: 220, category: 'breakfast' as MenuCategory, image: '/assets/Images/photo0jpg.jpg', tags: ['spicy', 'vegetarian'] },
   { id: 'm6', name: { en: 'Buna (Coffee Ceremony)', am: 'ቡና ሥነ ሥርዓት', had: 'Buna' }, desc: { en: 'Traditional Ethiopian coffee ceremony — freshly roasted, brewed, and served in three rounds.', am: 'የቡና ሥነ ሥርዓት — ባለሦስት ዙር።', had: 'Coffee ceremony, three rounds.' }, price: 150, category: 'drinks' as MenuCategory, image: '/assets/Images/Stage.jpg', tags: ['signature'] },
-  { id: 'm7', name: { en: 'Fresh Fruit Platter', am: 'የፍራፍሬ ምርጫ', had: 'Fruit Platter' }, desc: { en: 'Seasonal tropical fruits — mango, papaya, banana, and pineapple. Light and refreshing.', am: 'የወቅት ፍራፍሬዎች — ማንጎ፣ ፓፓያ፣ ሙዝ።', had: 'Tropical fruits, seasonal.' }, price: 280, category: 'breakfast' as MenuCategory, image: '/assets/Images/img1.jpg', tags: ['vegetarian', 'vegan'] },
+  { id: 'm7', name: { en: 'Fresh Fruit Platter', am: 'የፍራፍሬ ምርጫ', had: 'Fruit Platter' }, desc: { en: 'Seasonal tropical fruits — mango, papaya, banana, and pineapple. Light and refreshing.', am: 'የወቅቱ ፍራፍሬዎች — ማንጎ፣ ፓፓያ፣ ሙዝ።', had: 'Tropical fruits, seasonal.' }, price: 280, category: 'breakfast' as MenuCategory, image: '/assets/Images/img1.jpg', tags: ['vegetarian', 'vegan'] },
   { id: 'm8', name: { en: 'Grilled Tilapia', am: 'የተጠበሰ ጥብር', had: 'Tilapia' }, desc: { en: 'Fresh lake tilapia grilled with lime, garlic, and local herbs. Served with vegetables.', am: 'ከሐይል ያለፈ የተጠበሰ ጥብር ከሎሚ ጋር።', had: 'Grilled tilapia, lime, herbs.' }, price: 580, category: 'dinner' as MenuCategory, image: '/assets/Images/img6.jpg', tags: [] },
   { id: 'm9', name: { en: 'Vegetable Combo', am: 'የአትክልት ኮምቦ', had: 'Veg Combo' }, desc: { en: 'A generous platter of shiro, misir, atakilt, and gomen — four vegetarian dishes with injera.', am: 'ከሽሮ፣ ምስር፣ አታክልት እና ጎመን ጋር የተዘጋጀ ምግብ።', had: 'Four veg dishes, injera.' }, price: 380, category: 'lunch' as MenuCategory, image: '/assets/Images/img13.jpg', tags: ['vegetarian', 'vegan'] },
   { id: 'm10', name: { en: 'Tej (Honey Wine)', am: 'ጠጅ', had: 'Tej' }, desc: { en: 'Traditional Ethiopian honey wine, brewed locally. Sweet, golden, and served in a berele.', am: 'የተወሰነ የማር ወይን።', had: 'Honey wine, local.' }, price: 250, category: 'drinks' as MenuCategory, image: '/assets/Images/NightView.jpg', tags: ['signature'] },

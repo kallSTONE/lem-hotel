@@ -20,7 +20,7 @@ export function BookingModal({ open, onClose }: { open: boolean; onClose: () => 
           <div className="success-state">
             <div className="success-icon"><Check /></div>
             <p className="eyebrow">{tr(t.booking.success, lang)}</p>
-            <h2>{tr(t.booking.successTitle1, lang)}<br /><em>{tr(t.booking.successTitle2, lang)}</em></h2>
+              <h2>{tr(t.booking.successTitle1, lang)}<br /><em>{tr(t.booking.successTitle2, lang)}</em></h2>
             <p>{tr(t.booking.successMsg, lang)}</p>
             <button className="primary-button" onClick={onClose}>{tr(t.booking.back, lang)} <ArrowUpRight size={17} /></button>
           </div>

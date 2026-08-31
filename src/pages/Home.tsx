@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowUpRight, ChevronDown, Coffee, Play, Sparkles, Star, Utensils } from 'lucide-react';
 import { useLang } from '@/context/LangContext';
 import { t, tr, rooms } from '@/data/content';
- 
+   
 const photos = {
   heroMobile: '/assets/Images/welcome-Phone.webp',
   hero: '/assets/Images/welcome.webp',
@@ -21,7 +21,7 @@ export default function Home({ onBook }: { onBook: () => void }) {
   useEffect(() => {
     setHeroIndex(0);
   }, [lang]);   
-
+  
  
   useEffect(() => {
     const cycle = window.setInterval(() => {

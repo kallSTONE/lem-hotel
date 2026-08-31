@@ -31,6 +31,7 @@ function SiteLayout() {
     }
 
     // Hide header when first arriving at home.
+  
     setChromeVisible(false);
 
     const onScroll = () => {

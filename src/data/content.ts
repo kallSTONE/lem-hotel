@@ -26,7 +26,7 @@ export const rooms = [
     name: { en: 'Deluxe King', am: 'ዲሉክስ ኪንግ', had: 'Deluxe King' },
     desc: {
       en: 'Warm, elegant room with a plush king bed and garden-facing windows. Perfect for couples and solo travellers alike.',
-      am: 'ሙቅ እና ምርጥ የንጉስ አልጋ እና የአትክልት እይታ መስኮት አለው።',
+      am: 'ሙቅ እና ምርጥ የንጉስ አልጋ እና የአትክልት ስፍራ እይታ መስኮት አለው።',
       had: 'Warme king bed, garden view window qoodi.',
     },
     price: 3650,
@@ -39,10 +39,10 @@ export const rooms = [
   },
   {
     id: 'classic-twin',
-    name: { en: 'Classic Twin', am: 'ክላሲክ ትዊን', had: 'Classic Twin' },
+    name: { en: 'Classic Twin', am: 'ክላሲክ መንታ', had: 'Classic Twin' },
     desc: {
       en: 'Two comfortable twin beds in a bright, airy room. Ideal for friends or family travelling together.',
-      am: 'ሁለት ምርጥ ትዊን አልጋዎች በብርሃን ክፍል ውስጥ።',
+      am: 'ሁለት ምርጥ መንታ አልጋዎች በብርሃን ክፍል ውስጥ።',
       had: 'Lame twin bed qoodi, bright room giddo.',
     },
     price: 2850,

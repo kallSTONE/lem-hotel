@@ -359,7 +359,7 @@ export const t = {
     hereForYou: { en: 'We\'re here for you.', am: 'እኛ ለእርስዎ እንኖራለን።', had: 'Here for you.' },
     manage: { en: 'Manage', am: 'አስተዳድር', had: 'Manage' },
     workspace: { en: 'Workspace', am: 'የስራ ቦታ', had: 'Workspace' },
-  },
+  }, 
 };
 
 export type TranslationKey = typeof t;

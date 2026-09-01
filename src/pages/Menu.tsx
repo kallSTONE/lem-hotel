@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Search } from 'lucide-react';
-import { useLang } from '@/context/LangContext';
+import { useLang } from  '@/context/LangContext';
 import { t, tr, menuItems, type MenuCategory } from '@/data/content';
-import { PageHeader } from '@/components/Layout';
+import { PageHeader } from  '@/components/Layout';
 
-const categories: MenuCategory[] = ['breakfast', 'lunch', 'dinner', 'drinks', 'desserts'];
+const categories: MenuCategory[] = ['breakfast', 'lunch', 'dinner', 'drinks', 'desserts']; 
 
 export default function Menu() {
   const { lang } = useLang();
@@ -24,7 +24,7 @@ export default function Menu() {
         <div className="menu-controls">
           <div className="menu-search">
             <Search size={18} />
-            <input type="text" placeholder={tr(t.menu.search, lang)} value={search} onChange={e => setSearch(e.target.value)} />
+            <input type="text" placeholder={tr(t.menu.search, lang)} value={search} onChange={e => setSearch(e.target.value)} /> 
           </div>
           <div className="menu-tabs">
             <button className={active === 'all' ? 'active' : ''} onClick={() => setActive('all')}>{tr(t.menu.all, lang)}</button>

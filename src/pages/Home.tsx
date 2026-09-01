@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowUpRight, ChevronDown, Coffee, Play, Sparkles, Star, Utensils } from 'lucide-react';
 import { useLang } from '@/context/LangContext';
 import { t, tr, rooms } from '@/data/content';
-
+   
 const photos = {
   heroMobile: '/assets/Images/welcome-Phone.webp',
   hero: '/assets/Images/welcome.webp',
@@ -21,14 +21,14 @@ export default function Home({ onBook }: { onBook: () => void }) {
   useEffect(() => {
     setHeroIndex(0);
   }, [lang]);   
-
-
+  
+ 
   useEffect(() => {
     const cycle = window.setInterval(() => {
       setHeroIndex((current: number) => (current === 0 ? 1 : 0));
     }, 4200);
 
-    
+      
     return () => window.clearInterval(cycle);
   }, []);
 
@@ -45,7 +45,7 @@ export default function Home({ onBook }: { onBook: () => void }) {
           '--hero-desktop': `url(${photos.hero})`,
           '--hero-mobile': `url(${photos.heroMobile})`,
         }}
-      >
+      >. 
         <div className="hero-overlay" />
         <div className="hero-content">
           <p className="eyebrow light">{tr(t.hero.eyebrow, lang)}</p>

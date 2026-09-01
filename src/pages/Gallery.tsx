@@ -5,7 +5,7 @@ import { t, tr, galleryImages } from '@/data/content';
 import { PageHeader } from '@/components/Layout';
   
 type Filter = 'all' | 'rooms' | 'dining' | 'amenities';
-   
+    
 export default function Gallery() {
   const { lang } = useLang();
   const [filter, setFilter] = useState<Filter>('all');
@@ -37,12 +37,12 @@ export default function Gallery() {
           ))}
         </div>
       </section>
-      {lightbox && (
+      {lightbox && ( 
         <div className="lightbox" onClick={() => setLightbox(null)}>
           <button className="lightbox-close"><X /></button>
           <img src={lightbox} alt="Gallery" />
         </div>
-      )}
+      )} 
     </main>
   );
 }

@@ -14,7 +14,8 @@ function ScrollToTop() {
   const { pathname } = useLocation();
   if (typeof window !== 'undefined') window.scrollTo(0, 0);
   return null;
-}
+}. 
+  
 
 function SiteLayout() {
   const [bookingOpen, setBookingOpen] = useState(false);
@@ -30,6 +31,7 @@ function SiteLayout() {
     }
 
     // Hide header when first arriving at home.
+  
     setChromeVisible(false);
 
     const onScroll = () => {

@@ -3,14 +3,14 @@ export type Lang = 'en' | 'am' | 'had';
 export function tr(obj: Record<string, string>, lang: Lang) {
   return obj[lang] || obj.en;
 }
-
+  
 export const rooms = [
   {
     id: 'executive-suite',
     name: { en: 'Executive Suite', am: 'የአስተዳደር ቅበላ', had: 'Executive Suite' },
     desc: {
       en: 'A spacious suite with a king bed, separate sitting area, and panoramic city views. Designed for longer stays and quiet evenings.',
-      am: 'ትልቅ የንጉስ አልጋ፣ የተለየ የመቀመጫ ክፍል እና የከተማ እይታ አለው።',
+      am: 'ትልቅ የንጉስ አልጋ፣ የተለየ የመቀመጫ ቦታ እና የከተማ እይታ አለው።',
       had: 'EkkoSuite giddo king bed, sitting area, city view xaadooshshi.',
     },
     price: 4850,
@@ -26,23 +26,23 @@ export const rooms = [
     name: { en: 'Deluxe King', am: 'ዲሉክስ ኪንግ', had: 'Deluxe King' },
     desc: {
       en: 'Warm, elegant room with a plush king bed and garden-facing windows. Perfect for couples and solo travellers alike.',
-      am: 'ሙቅ እና ምርጥ የኪንግ አልጋ እና የአትክልት እይታ መስኮት አለው።',
+      am: 'ሙቅ እና ምርጥ የንጉስ አልጋ እና የአትክልት ስፍራ እይታ መስኮት አለው።',
       had: 'Warme king bed, garden view window qoodi.',
-    },
+    }, 
     price: 3650,
     size: '28 m²',
     bed: 'King',
-    view: { en: 'Garden view', am: 'የአትክልት እይታ', had: 'Garden view' },
+    view: { en: 'Garden view', am: 'የአትክልት ስፍራ እይታ', had: 'Garden view' },
     image: '/assets/Images/img2.jpg',
     available: true,
     amenities: ['King bed', 'Garden view', '28 m²', 'Free Wi-Fi', 'Breakfast included', 'Air conditioning'],
   },
   {
     id: 'classic-twin',
-    name: { en: 'Classic Twin', am: 'ክላሲክ ትዊን', had: 'Classic Twin' },
+    name: { en: 'Classic Twin', am: 'ክላሲክ መንታ', had: 'Classic Twin' },
     desc: {
       en: 'Two comfortable twin beds in a bright, airy room. Ideal for friends or family travelling together.',
-      am: 'ሁለት ምርጥ ትዊን አልጋዎች በብርሃን ክፍል ውስጥ።',
+      am: 'ሁለት ምርጥ መንታ አልጋዎች በአንድ ክፍል ውስጥ።',
       had: 'Lame twin bed qoodi, bright room giddo.',
     },
     price: 2850,
@@ -68,13 +68,13 @@ export const rooms = [
     image: '/assets/Images/img6.jpg',
     available: true,
     amenities: ['King + 2 singles', 'Garden view', '36 m²', 'Free Wi-Fi', 'Breakfast included', 'Air conditioning'],
-  },
+  }, 
   {
     id: 'presidential-suite',
     name: { en: 'Presidential Suite', am: 'የፕሬዝዳንት ሱፕ', had: 'Presidential Suite' },
     desc: {
       en: 'Our finest suite — a king bedroom, private dining area, and a terrace overlooking the Hossana hills. The ultimate Lema Hotel experience.',
-      am: 'ታላቁ ሱፓችን — የንጉስ አልጋ፣ የግል አብራራ እና የሆሳዕና ኮረብታ እይታ ቴራሳ።',
+      am: 'ታላቁና ምርጡ ቅበላችን — የንጉስ አልጋ፣ የግል መመገቢያ እና የሆሳዕና ኮረብታ እይታ ያለው በረንዳ።',
       had: 'Bishan suite — king bed, private dining, terrace hill view.',
     },
     price: 7200,
@@ -90,7 +90,7 @@ export const rooms = [
     name: { en: 'Garden Deluxe', am: 'ገርደን ዲሉክስ', had: 'Garden Deluxe' },
     desc: {
       en: 'A serene ground-floor room opening directly onto the courtyard garden. Wake up to birdsong and morning light.',
-      am: 'ለአትክልት አደባባይ የሚከፈት ምርጥ ክፍል።',
+      am: 'ለአትክልት አደባባይ የሚያሳይ ምርጥ ክፍል።',
       had: 'Ground-floor room, courtyard garden giddo xiiya.',
     },
     price: 3200,
@@ -106,47 +106,48 @@ export const rooms = [
 export type MenuCategory = 'breakfast' | 'lunch' | 'dinner' | 'drinks' | 'desserts';
 
 export const menuItems = [
-  { id: 'm1', name: { en: 'Doro Wat', am: 'ዶሮ ወጥ', had: 'Doro Wat' }, desc: { en: 'Ethiopia\'s national dish — slow-cooked chicken in berbere sauce, served with injera.', am: 'የኢትዮጵያ ብሔራዊ ምግብ — በበርበሬ መረቅ የተቀቀለ ዶሮ።', had: 'Doro wat — berbere sauce giddo chicken.' }, price: 480, category: 'lunch' as MenuCategory, image: '/assets/Images/LemHotelVenue.jpg', tags: ['spicy', 'signature'] },
-  { id: 'm2', name: { en: 'Tibs Siziga', am: 'ጥብስ ስዚጋ', had: 'Tibs' }, desc: { en: 'Sizzling cubed beef with rosemary, garlic, and awaze. Served hot on traditional clay.', am: 'ቅመም ያለው የበሬ ሥጋ ከሮማሪ እና ነጭ ሽንኩርት ጋር።', had: 'Beef tibs, rosemary, garlic.' }, price: 520, category: 'dinner' as MenuCategory, image: '/assets/Images/venue2.jpg', tags: ['spicy'] },
+  { id: 'm1', name: { en: 'Doro Wat', am: 'ዶሮ ወጥ', had: 'Doro Wat' }, desc: { en: 'Ethiopia\'s national dish — slow-cooked chicken in berbere sauce, served with injera.', am: 'የኢትዮጵያ ባህላዊ ምግብ — በበርበሬ መረቅ የተቀቀለ ዶሮ።', had: 'Doro wat — berbere sauce giddo chicken.' }, price: 480, category: 'lunch' as MenuCategory, image: '/assets/Images/LemHotelVenue.jpg', tags: ['spicy', 'signature'] },
+  { id: 'm2', name: { en: 'Tibs Siga', am: 'ጥብስ ስጋ', had: 'Tibs' }, desc: { en: 'Sizzling cubed beef with rosemary, garlic, and awaze. Served hot on traditional clay.', am: 'ቅመም ያለው የበሬ ሥጋ ከኮሮሪማ እና ነጭ ሽንኩርት ጋር።', had: 'Beef tibs, rosemary, garlic.' }, price: 520, category: 'dinner' as MenuCategory, image: '/assets/Images/venue2.jpg', tags: ['spicy'] },
   { id: 'm3', name: { en: 'Shiro', am: 'ሽሮ', had: 'Shiro' }, desc: { en: 'Creamy chickpea stew slow-simmered with garlic and berbere. A Hossana favourite.', am: 'ለስልጭኛ የኑግ ወጥ ከነጭ ሽንኩርት ጋር።', had: 'Chickpea stew, garlic, berbere.' }, price: 320, category: 'lunch' as MenuCategory, image: '/assets/Images/LemHotelBar.jpg', tags: ['vegetarian'] },
-  { id: 'm4', name: { en: 'Kitfo', am: 'ኪጦ ፎ', had: 'Kitfo' }, desc: { en: 'Minced raw beef seasoned with mitmita and niter kibbeh. A delicacy for the adventurous.', am: 'በሚጥሚጣ የተቀመመ የተከተፈ ሥጋ።', had: 'Raw beef, mitmita, kibbeh.' }, price: 680, category: 'dinner' as MenuCategory, image: '/assets/Images/lemhotelbar2.jpg', tags: ['signature'] },
+  { id: 'm4', name: { en: 'Kitfo', am: 'ክትፎ', had: 'Kitfo' }, desc: { en: 'Minced raw beef seasoned with mitmita and niter kibbeh. A delicacy for the adventurous.', am: 'በሚጥሚጣ የተቀመመ የተከተፈ ሥጋ።', had: 'Raw beef, mitmita, kibbeh.' }, price: 680, category: 'dinner' as MenuCategory, image: '/assets/Images/lemhotelbar2.jpg', tags: ['signature'] },
   { id: 'm5', name: { en: 'Firfir', am: 'ፍርፍር', had: 'Firfir' }, desc: { en: 'Shredded injera tossed in spiced berbere sauce with onion and butter. A classic breakfast.', am: 'የተቀቀለ እንጀራ ከበርበሬ ጋር።', had: 'Shredded injera, berbere.' }, price: 220, category: 'breakfast' as MenuCategory, image: '/assets/Images/photo0jpg.jpg', tags: ['spicy', 'vegetarian'] },
-  { id: 'm6', name: { en: 'Buna (Coffee Ceremony)', am: 'ቡና ሥነ ሥርዓት', had: 'Buna' }, desc: { en: 'Traditional Ethiopian coffee ceremony — freshly roasted, brewed, and served in three rounds.', am: 'የቡና ሥነ ሥርዓት — ባለሦስት ዙር።', had: 'Coffee ceremony, three rounds.' }, price: 150, category: 'drinks' as MenuCategory, image: '/assets/Images/Stage.jpg', tags: ['signature'] },
-  { id: 'm7', name: { en: 'Fresh Fruit Platter', am: 'የፍራፍሬ ምርጫ', had: 'Fruit Platter' }, desc: { en: 'Seasonal tropical fruits — mango, papaya, banana, and pineapple. Light and refreshing.', am: 'የወቅት ፍራፍሬዎች — ማንጎ፣ ፓፓያ፣ ሙዝ።', had: 'Tropical fruits, seasonal.' }, price: 280, category: 'breakfast' as MenuCategory, image: '/assets/Images/img1.jpg', tags: ['vegetarian', 'vegan'] },
+  { id: 'm6', name: { en: 'Buna (Coffee Ceremony)', am: 'የቡና ሥነ ሥርዓት', had: 'Buna' }, desc: { en: 'Traditional Ethiopian coffee ceremony — freshly roasted, brewed, and served in three rounds.', am: 'የቡና ሥነ ሥርዓት — ባለሦስት ዙር።', had: 'Coffee ceremony, three rounds.' }, price: 150, category: 'drinks' as MenuCategory, image: '/assets/Images/Stage.jpg', tags: ['signature'] },
+  { id: 'm7', name: { en: 'Fresh Fruit Platter', am: 'የፍራፍሬ ምርጫ', had: 'Fruit Platter' }, desc: { en: 'Seasonal tropical fruits — mango, papaya, banana, and pineapple. Light and refreshing.', am: 'የወቅቱ ፍራፍሬዎች — ማንጎ፣ ፓፓያ፣ ሙዝ።', had: 'Tropical fruits, seasonal.' }, price: 280, category: 'breakfast' as MenuCategory, image: '/assets/Images/img1.jpg', tags: ['vegetarian', 'vegan'] },
   { id: 'm8', name: { en: 'Grilled Tilapia', am: 'የተጠበሰ ጥብር', had: 'Tilapia' }, desc: { en: 'Fresh lake tilapia grilled with lime, garlic, and local herbs. Served with vegetables.', am: 'ከሐይል ያለፈ የተጠበሰ ጥብር ከሎሚ ጋር።', had: 'Grilled tilapia, lime, herbs.' }, price: 580, category: 'dinner' as MenuCategory, image: '/assets/Images/img6.jpg', tags: [] },
   { id: 'm9', name: { en: 'Vegetable Combo', am: 'የአትክልት ኮምቦ', had: 'Veg Combo' }, desc: { en: 'A generous platter of shiro, misir, atakilt, and gomen — four vegetarian dishes with injera.', am: 'ከሽሮ፣ ምስር፣ አታክልት እና ጎመን ጋር የተዘጋጀ ምግብ።', had: 'Four veg dishes, injera.' }, price: 380, category: 'lunch' as MenuCategory, image: '/assets/Images/img13.jpg', tags: ['vegetarian', 'vegan'] },
   { id: 'm10', name: { en: 'Tej (Honey Wine)', am: 'ጠጅ', had: 'Tej' }, desc: { en: 'Traditional Ethiopian honey wine, brewed locally. Sweet, golden, and served in a berele.', am: 'የተወሰነ የማር ወይን።', had: 'Honey wine, local.' }, price: 250, category: 'drinks' as MenuCategory, image: '/assets/Images/NightView.jpg', tags: ['signature'] },
   { id: 'm11', name: { en: 'Chocolate Mousse', am: 'ቸኮሌት ሙስ', had: 'Chocolate Mousse' }, desc: { en: 'Airy dark chocolate mousse with a hint of cardamom and crushed pistachio.', am: 'ቅመም ያለው የቸኮሌት ሙስ።', had: 'Dark chocolate, cardamom.' }, price: 190, category: 'desserts' as MenuCategory, image: '/assets/Images/BuildingView.jpg', tags: ['vegetarian'] },
   { id: 'm12', name: { en: 'Avocado Toast', am: 'አቮካዶ ቶስት', had: 'Avocado Toast' }, desc: { en: 'Sourdough toast with smashed avocado, chili flakes, and a poached egg.', am: 'ከአቮካዶ እና እንቁላል ጋር የተዘጋጀ ቶስት።', had: 'Avocado, sourdough, egg.' }, price: 240, category: 'breakfast' as MenuCategory, image: '/assets/Images/img14.jpg', tags: ['vegetarian'] },
-];
+]; 
+
 
 export const galleryImages = [
   { url: '/assets/Images/NightView.jpg', caption: { en: 'Poolside at sunset', am: 'በመጨረሻ ጊዜ የባለቤት ክፍል', had: 'Pool at sunset' }, category: 'amenities' },
   { url: '/assets/Images/img3.jpg', caption: { en: 'Executive Suite', am: 'አገር አስተዳደር ሱፕ', had: 'Executive Suite' }, category: 'rooms' },
-  { url: '/assets/Images/LemHotelVenue.jpg', caption: { en: 'Dining under the stars', am: 'በኮከቦች ስር ምግብ', had: 'Dining under stars' }, category: 'dining' },
+  { url: '/assets/Images/LemHotelVenue.jpg', caption: { en: 'Dining under the stars', am: 'በኮከቦች ስር ምግብ', had: 'Dining under stars' }, category: 'dining' }, 
   { url: '/assets/Images/Stage.jpg', caption: { en: 'Spa & wellness', am: 'ስፓ እና ጤና', had: 'Spa & wellness' }, category: 'amenities' },
-  { url: '/assets/Images/LemHotelGate.jpg', caption: { en: 'The courtyard', am: 'አደባባይ', had: 'Courtyard' }, category: 'amenities' },
+  { url: '/assets/Images/LemHotelGate.jpg', caption: { en: 'The courtyard', am: 'አደባባይ', had: 'Courtyard' }, category: 'amenities' }, 
   { url: '/assets/Images/img2.jpg', caption: { en: 'Deluxe King', am: 'ዲሉክስ ኪንግ', had: 'Deluxe King' }, category: 'rooms' },
-  { url: '/assets/Images/lemhotelbar2.jpg', caption: { en: 'Doro Wat', am: 'ዶሮ ወጥ', had: 'Doro Wat' }, category: 'dining' },
+  { url: '/assets/Images/lemhotelbar2.jpg', caption: { en: 'Doro Wat', am: 'የዶሮ ወጥ', had: 'Doro Wat' }, category: 'dining' },
   { url: '/assets/Images/Coridor.jpg', caption: { en: 'The lobby', am: 'መነሻ', had: 'Lobby' }, category: 'amenities' },
   { url: '/assets/Images/img6.jpg', caption: { en: 'Family Room', am: 'የቤተሰብ ክፍል', had: 'Family Room' }, category: 'rooms' },
-  { url: '/assets/Images/LemHotelBar.jpg', caption: { en: 'Lounge bar', am: 'የተለየ ቡና ቤት', had: 'Lounge bar' }, category: 'amenities' },
+  { url: '/assets/Images/LemHotelBar.jpg', caption: { en: 'Lounge bar', am: 'የተለየ ባር', had: 'Lounge bar' }, category: 'amenities' },
   { url: '/assets/Images/photo0jpg.jpg', caption: { en: 'Coffee ceremony', am: 'የቡና ሥነ ሥርዓት', had: 'Coffee ceremony' }, category: 'dining' },
   { url: '/assets/Images/img14.jpg', caption: { en: 'Presidential Suite', am: 'የፕሬዝዳንት ሱፕ', had: 'Presidential Suite' }, category: 'rooms' },
 ];
 
 export const staff = [
   { name: 'Tadesse Bekele', role: { en: 'General Manager', am: 'ዋና አስተዳዳሪ', had: 'General Manager' }, image: '/assets/Images/InfluencerPhotoinlemhotel.jpg', bio: { en: 'Twenty years in Ethiopian hospitality. Tadesse believes every guest is family.', am: 'ለሀያ ዓመታት በኢትዮጵያ መስተንግዶ።', had: '20 years hospitality.' } },
-  { name: 'Helen Girma', role: { en: 'Head Chef', am: 'ዋና ሼፍ', had: 'Head Chef' }, image: '/assets/Images/photo0jpg.jpg', bio: { en: 'Helen brings Hossana\'s flavours to every plate. Trained in Addis Ababa and Florence.', am: 'የሆሳዕናን ጣዕሞች ወደ ስልት ታስተላልፋለች።', had: 'Hossana flavours, trained Addis & Florence.' } },
-  { name: 'Solomon Abera', role: { en: 'Guest Relations', am: 'የእንግድ ግንኙነት', had: 'Guest Relations' }, image: '/assets/Images/LemHotelCertificates.jpg', bio: { en: 'Solomon knows Hossana\'s every corner and loves sharing hidden gems with guests.', am: 'ሰሎሞን የሆሳዕናን ሁሉንም ጥልቅ ይወቃል።', had: 'Knows Hossana well.' } },
+  { name: 'Helen Girma', role: { en: 'Head Chef', am: 'ዋና ሼፍ', had: 'Head Chef' }, image: '/assets/Images/photo0jpg.jpg', bio: { en: 'Helen brings Hossana\'s flavours to every plate. Trained in Addis Ababa and Florence.', am: 'የሆሳዕናን ጣዕሞች ወደ ማዕድነት ትቀይራለች።', had: 'Hossana flavours, trained Addis & Florence.' } },
+  { name: 'Solomon Abera', role: { en: 'Guest Relations', am: 'የእንግዶች ግንኙነት', had: 'Guest Relations' }, image: '/assets/Images/LemHotelCertificates.jpg', bio: { en: 'Solomon knows Hossana\'s every corner and loves sharing hidden gems with guests.', am: 'ሰሎሞን የሆሳዕናን ሁሉንም ጥልቅ ይወቃል።', had: 'Knows Hossana well.' } },
   { name: 'Marta Tola', role: { en: 'Housekeeping Manager', am: 'የቤት ጥበቃ አስተዳዳሪ', had: 'Housekeeping Manager' }, image: '/assets/Images/LemHotelTophies.jpg', bio: { en: 'Marta leads our housekeeping team with a quiet, meticulous care.', am: 'ማርታ የቤት ጥበቃ ቡድንን ትመራለች።', had: 'Leads housekeeping team.' } },
 ];
-
+   
 export const nearbySites = [
   {
-    name: { en: 'Ajora Waterfall', am: 'አጆራ ውሃ መንጭ', had: 'Ajora Fisha' },
-    desc: { en: 'A stunning twin waterfall nestled in the Hossana countryside. A short drive from the hotel, best visited in the morning light.', am: 'በሆሳዕና አካባቢ ያለ ትልቅ የውሃ መንጭ።', had: 'Twin waterfall near Hossana.' },
-    distance: '18 km',
+    name: { en: 'Ajora Waterfall', am: 'አጆራ ፏፏቴ', had: 'Ajora Fisha' },
+    desc: { en: 'A stunning twin waterfall nestled in the Hossana countryside. A short drive from the hotel, best visited in the morning light.', am: 'በሆሳዕና አካባቢ ያለ ትልቅ መንትያ የውሃ ፏፏቴ።', had: 'Twin waterfall near Hossana.' },
+    distance: '18 km', 
     image: '/assets/Images/attractions/ajora.webp',
     Images: [
       '/assets/Images/attractions/ajora.webp',
@@ -156,9 +157,9 @@ export const nearbySites = [
       '/assets/Images/attractions/ajora6.webp',
       '/assets/Images/attractions/ajoras.webp',
     ],
-  },
+  }, 
   {
-    name: { en: 'Tiya Stones', am: 'ጥያ ድንጋዮች', had: 'Tiya Stones' },
+    name: { en: 'Tiya Stones', am: 'ጥያ ትክል ድንጋዮች', had: 'Tiya Stones' },
     desc: { en: 'A UNESCO World Heritage Site — ancient stelae carved with mysterious symbols, dating back to the 10th century.', am: 'የዩኔስኮ የዓለም ቅርስ — ጥንታዊ ድንጋዮች።', had: 'UNESCO site, ancient stelae.' },
     distance: '85 km',
     image: '/assets/Images/attractions/tiya.jpg',
@@ -172,7 +173,7 @@ export const nearbySites = [
   },
   {
     name: { en: 'Shenkola Mountain', am: 'ሸንቆላ ተራራ', had: 'Shenkola Tulla' },
-    desc: { en: 'A scenic mountain landscape outside Hossana, known for sunrise views and fresh highland air.', am: 'ከሆሳዕና ውጪ የሚገኝ ውብ ተራራ እና የንጋት እይታ።', had: 'Mountain view area with cool highland air.' },
+    desc: { en: 'A scenic mountain landscape outside Hossana, known for sunrise views and fresh highland air.', am: 'ከሆሳዕና በቅርብ ርቀት የሚገኝ ውብ ተራራ እና የንጋት እይታ።', had: 'Mountain view area with cool highland air.' },
     distance: '27 km',
     image: '/assets/Images/attractions/shenqola.jpg',
     Images: ['/assets/Images/attractions/shenqola.jpg'],
@@ -186,18 +187,18 @@ export const nearbySites = [
     Images: [
       '/assets/Images/attractions/ambericho.jpg',
       '/assets/Images/attractions/ambericho1.webp',
-      '/assets/Images/attractions/ambericho3.jpg',
+      '/assets/Images/attractions/ambericho3.jpg', 
     ],
-  },
+  }, 
   {
-    name: { en: 'Bezabih Petros Site', am: 'በዛብህ ጴጥሮስ ቦታ', had: 'Bezabih Petros' },
-    desc: { en: 'A notable local landmark connected to the area\'s culture and history, often visited during local tours.', am: 'ከአካባቢው ባህል እና ታሪክ ጋር የተያያዘ የታወቀ ቦታ።', had: 'Known local landmark tied to culture and history.' },
+    name: { en: 'Bezabih Petros Site', am: 'በዛብህ ጴጥሮስ የክብር ሀውልት', had: 'Bezabih Petros' },
+    desc: { en: 'A notable local landmark connected to the area\'s culture and history, often visited during local tours.', am: 'ከአካባቢው ባህል እና ታሪክ ጋር በተያያዘ የታወቀ ቦታ።', had: 'Known local landmark tied to culture and history.' },
     distance: '16 km',
     image: '/assets/Images/attractions/bezabihpetros.jpg',
     Images: ['/assets/Images/attractions/bezabihpetros.jpg'],
-  },
+  }, 
   {
-    name: { en: 'Hossana Market', am: 'የሆሳዕና ገበያ', had: 'Hossana Market' },
+    name: { en: 'Hossana Market', am: 'የሆሳዕና ቅዳሜ ገበያ', had: 'Hossana Market' },
     desc: { en: 'The vibrant heart of Hossana — spices, textiles, and fresh produce. Open daily, busiest on Saturdays.', am: 'የሆሳዕና ህይወት ማዕከል — ቅመሞች እና ጨርቆች።', had: 'Spices, textiles, fresh produce.' },
     distance: '2 km',
     image: '/assets/Images/LemHotelVenue.jpg',
@@ -216,19 +217,19 @@ export const t = {
   nav: {
     home: { en: 'Home', am: 'መነሻ', had: 'Wode' },
     rooms: { en: 'Rooms', am: 'ክፍሎች', had: 'Baatte' },
-    menu: { en: 'Menu', am: 'ምና', had: 'Mennu' },
-    gallery: { en: 'Gallery', am: 'ማዕከለ-ስዕል', had: 'Galleri' },
-    about: { en: 'About', am: 'ስለ', had: 'Kaanitte' },
+    menu: { en: 'Menu', am: 'ሜኑ', had: 'Mennu' },
+    gallery: { en: 'Gallery', am: 'ፎቶዎች', had: 'Galleri' },
+    about: { en: 'About', am: 'ስለኛ', had: 'Kaanitte' },
     nearby: { en: 'Nearby', am: 'በአቅራቢያ', had: 'Kaareshshu' },
-    contact: { en: 'Contact', am: 'ግንኙነት', had: 'Okkota' },
-    book: { en: 'Book your stay', am: 'ቆይታዎን ይያዙ', had: 'Baaruwawu daqqi' },
-    staff: { en: 'Staff view', am: 'የሰራተኞች እይታ', had: 'Staff view' },
+    contact: { en: 'Contact', am: 'አድራሻ', had: 'Okkota' },
+    book: { en: 'Book your stay', am: 'ከክፍሎን ይያዙ', had: 'Baaruwawu daqqi' },
+    staff: { en: 'Staff view', am: 'ለሰራተኞች', had: 'Staff view' },
   },
   hero: {
-    eyebrow: { en: 'A gentler way to arrive', am: 'ለመውደቅ ለስላሳ መንገድ', had: 'Xiqqa xiiya gorsu' },
+    eyebrow: { en: 'A gentler way to arrive', am: 'ተረጋግተው የሚደርሱበት መንገድ', had: 'Xiqqa xiiya gorsu' },
     title1: { en: 'Stay awhile.', am: 'ትንሽ ቆይ።', had: 'Xiqqa baaru.' },
     title2: { en: 'Feel at home.', am: 'እንደ ቤትዎ ይሰማዎ።', had: 'Lampe geeshsha.' },
-    welcome: { en: 'Welcome to Lem.', am: 'ወደ ሌም እንኳን በደህና መጡ።', had: 'Lemma gidaa welcome.' },
+    welcome: { en: 'Welcome to Lem.', am: 'ወደ ሌም እንኳን በደህና መጡ።', had: 'Lem gidaa welcome.' },
     copy: { en: 'A quiet, considered hotel in the heart of Hossana. Come for the view, stay for the warmth.', am: 'በሆሳዕና ልብ ውስጥ ቅንነት ያለው ሆቴል።', had: 'Hossana giddo quiet hotel.' },
     cta1: { en: 'Find your room', am: 'አልጋዎን ያግኙ', had: 'Baatta kaawi' },
     cta2: { en: 'Watch our story', am: 'ታሪካችንን ይመልከቱ', had: 'Story aayi' },
@@ -280,8 +281,8 @@ export const t = {
     from: { en: 'From', am: 'ከ', had: 'Ikkuno' },
     perNight: { en: '/ night', am: '/ ምሽት', had: '/ hawaro' },
     amenities: { en: 'Amenities', am: 'መመለሻዎች', had: 'Amenities' },
-    bookThis: { en: 'Book this room', am: 'ይህን ክፍል ይያዙ', had: 'Baatta daqqi' },
-  },
+    bookThis: { en: 'Book this room', am: 'ይህን ክፍል ይያዙ', had: 'Baatta daqqi' },  
+  }, 
   menu: {
     title: { en: 'Our Menu', am: 'ምናችን', had: 'Mennu' },
     subtitle: { en: 'A celebration of Ethiopian flavours, served with care. Every dish is made fresh to order.', am: 'የኢትዮጵያ ጣዕሞች በጥንቃቄ የተዘጋጁ።', had: 'Ethiopian flavours, fresh.' },
@@ -357,7 +358,7 @@ export const t = {
     hereForYou: { en: 'We\'re here for you.', am: 'እኛ ለእርስዎ እንኖራለን።', had: 'Here for you.' },
     manage: { en: 'Manage', am: 'አስተዳድር', had: 'Manage' },
     workspace: { en: 'Workspace', am: 'የስራ ቦታ', had: 'Workspace' },
-  },
+  }, 
 };
 
 export type TranslationKey = typeof t;

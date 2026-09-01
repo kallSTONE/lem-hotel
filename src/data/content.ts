@@ -197,7 +197,7 @@ export const nearbySites = [
     distance: '16 km',
     image: '/assets/Images/attractions/bezabihpetros.jpg',
     Images: ['/assets/Images/attractions/bezabihpetros.jpg'],
-  },
+  }, 
   {
     name: { en: 'Hossana Market', am: 'የሆሳዕና ቅዳሜ ገበያ', had: 'Hossana Market' },
     desc: { en: 'The vibrant heart of Hossana — spices, textiles, and fresh produce. Open daily, busiest on Saturdays.', am: 'የሆሳዕና ህይወት ማዕከል — ቅመሞች እና ጨርቆች።', had: 'Spices, textiles, fresh produce.' },

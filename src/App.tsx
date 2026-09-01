@@ -14,7 +14,7 @@ function ScrollToTop() {
   const { pathname } = useLocation();
   if (typeof window !== 'undefined') window.scrollTo(0, 0);
   return null;
-}. 
+}
   
 
 function SiteLayout() {

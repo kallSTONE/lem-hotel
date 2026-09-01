@@ -282,7 +282,7 @@ export const t = {
     from: { en: 'From', am: 'ከ', had: 'Ikkuno' },
     perNight: { en: '/ night', am: '/ ምሽት', had: '/ hawaro' },
     amenities: { en: 'Amenities', am: 'መመለሻዎች', had: 'Amenities' },
-    bookThis: { en: 'Book this room', am: 'ይህን ክፍል ይያዙ', had: 'Baatta daqqi' },
+    bookThis: { en: 'Book this room', am: 'ይህን ክፍል ይያዙ', had: 'Baatta daqqi' }, 
   }, 
   menu: {
     title: { en: 'Our Menu', am: 'ምናችን', had: 'Mennu' },

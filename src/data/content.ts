@@ -74,7 +74,7 @@ export const rooms = [
     name: { en: 'Presidential Suite', am: 'የፕሬዝዳንት ሱፕ', had: 'Presidential Suite' },
     desc: {
       en: 'Our finest suite — a king bedroom, private dining area, and a terrace overlooking the Hossana hills. The ultimate Lem experience.',
-      am: 'ታላቁና ምርጡ ቅበላችን — የንጉስ አልጋ፣ የግል መመገቢያ እና የሆሳዕና ኮረብታ እይታ ያለው በረንዳ።',
+      am: 'ታላቁና ምርጡ ቅበላችን — የንጉስ አልጋ፣ የግል መመገቢያ እና የሆሳዕና ኮረብታ እይታ ያለው በረንዳ።', 
       had: 'Bishan suite — king bed, private dining, terrace hill view.',
     },
     price: 7200,

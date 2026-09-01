@@ -118,7 +118,7 @@ export const menuItems = [
   { id: 'm10', name: { en: 'Tej (Honey Wine)', am: 'ጠጅ', had: 'Tej' }, desc: { en: 'Traditional Ethiopian honey wine, brewed locally. Sweet, golden, and served in a berele.', am: 'የተወሰነ የማር ወይን።', had: 'Honey wine, local.' }, price: 250, category: 'drinks' as MenuCategory, image: '/assets/Images/NightView.jpg', tags: ['signature'] },
   { id: 'm11', name: { en: 'Chocolate Mousse', am: 'ቸኮሌት ሙስ', had: 'Chocolate Mousse' }, desc: { en: 'Airy dark chocolate mousse with a hint of cardamom and crushed pistachio.', am: 'ቅመም ያለው የቸኮሌት ሙስ።', had: 'Dark chocolate, cardamom.' }, price: 190, category: 'desserts' as MenuCategory, image: '/assets/Images/BuildingView.jpg', tags: ['vegetarian'] },
   { id: 'm12', name: { en: 'Avocado Toast', am: 'አቮካዶ ቶስት', had: 'Avocado Toast' }, desc: { en: 'Sourdough toast with smashed avocado, chili flakes, and a poached egg.', am: 'ከአቮካዶ እና እንቁላል ጋር የተዘጋጀ ቶስት።', had: 'Avocado, sourdough, egg.' }, price: 240, category: 'breakfast' as MenuCategory, image: '/assets/Images/img14.jpg', tags: ['vegetarian'] },
-];
+]; 
 
 export const galleryImages = [
   { url: '/assets/Images/NightView.jpg', caption: { en: 'Poolside at sunset', am: 'በመጨረሻ ጊዜ የባለቤት ክፍል', had: 'Pool at sunset' }, category: 'amenities' },

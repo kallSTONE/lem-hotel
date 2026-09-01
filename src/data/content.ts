@@ -3,7 +3,7 @@ export type Lang = 'en' | 'am' | 'had';
 export function tr(obj: Record<string, string>, lang: Lang) {
   return obj[lang] || obj.en;
 }
-
+  
 export const rooms = [
   {
     id: 'executive-suite',

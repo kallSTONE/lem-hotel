@@ -32,7 +32,7 @@ const initialTables: TableRes[] = [
 ];
 
 const initialReviews: Review[] = [
-  { id: 1, guest: 'Nardos M.', rating: 5, text: 'Lem is the kind of place that makes you want to turn your phone off and stay one more night.', date: 'Aug 18, 2026' },
+  { id: 1, guest: 'Nardos M.', rating: 5, text: 'Lema Hotel is the kind of place that makes you want to turn your phone off and stay one more night.', date: 'Aug 18, 2026' },
   { id: 2, guest: 'James K.', rating: 5, text: 'The coffee ceremony at sunrise was unforgettable. The staff treated us like family.', date: 'Aug 15, 2026' },
   { id: 3, guest: 'Selam T.', rating: 4, text: 'Beautiful rooms and incredible food. The doro wat is the best I\'ve had in Ethiopia.', date: 'Aug 12, 2026' },
 ];
@@ -79,7 +79,7 @@ export default function Admin() {
         <div className="admin-title">
           <button className="admin-menu-btn" onClick={() => setMobileSidebar(!mobileSidebar)}><LayoutDashboard size={19} /></button>
           <div className="admin-logo"><LayoutDashboard size={19} /></div>
-          <span>Lem / <strong>{tr(t.admin.title, lang)}</strong></span>
+          <span>Lema / <strong>{tr(t.admin.title, lang)}</strong></span>
         </div>
         <div className="admin-user">
           <Bell size={18} />
@@ -255,7 +255,7 @@ export default function Admin() {
             <>
               <div className="dashboard-header"><div><p className="eyebrow">{tr(t.admin.manage, lang)}</p><h1>{tr(t.admin.settings, lang)}</h1></div></div>
               <div className="dashboard-card full">
-                <div className="settings-row"><div><strong>Hotel name</strong><span>Lem Hotel</span></div><button className="row-btn"><Edit3 size={15} /></button></div>
+                <div className="settings-row"><div><strong>Hotel name</strong><span>Lema Hotel</span></div><button className="row-btn"><Edit3 size={15} /></button></div>
                 <div className="settings-row"><div><strong>Location</strong><span>Hossana, Ethiopia</span></div><button className="row-btn"><Edit3 size={15} /></button></div>
                 <div className="settings-row"><div><strong>Currency</strong><span>ETB (Ethiopian Birr)</span></div><button className="row-btn"><Edit3 size={15} /></button></div>
                 <div className="settings-row"><div><strong>Languages</strong><span>English, Amharic, Hadiyissa</span></div><button className="row-btn"><Edit3 size={15} /></button></div>

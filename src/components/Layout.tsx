@@ -94,8 +94,8 @@ export function Navbar({ onBook, chromeVisible }: { onBook: () => void; chromeVi
     <>
       <header className={`nav-wrap ${location.pathname === '/' ? 'home-chrome' : ''} ${chromeVisible ? 'is-visible' : 'is-hidden'}`}>
         <Link className="brand" to="/">
-          <img src="/image.png" alt="Lem Hotel" />
-          <span>LEM HOTEL<small>HOSSANA · ETHIOPIA</small></span>
+          <img src="/image.png" alt="Lema Hotel" />
+          <span>LEMA HOTEL<small>HOSSANA · ETHIOPIA</small></span>
         </Link>
         <nav className={menuOpen ? 'nav-links mobile-visible' : 'nav-links'}>
           {navItems.map(item => (
@@ -128,8 +128,8 @@ export function Footer() {
   return (
     <footer>
       <div className="footer-brand">
-        <img src="/image.png" alt="Lem Hotel" />
-        <span>LEM HOTEL<small>HOSSANA · ETHIOPIA</small></span>
+        <img src="/image.png" alt="Lema Hotel" />
+        <span>LEMA HOTEL<small>HOSSANA · ETHIOPIA</small></span>
       </div>
       <p>{tr(t.footer.tagline, lang)}</p>
       <div className="footer-social">

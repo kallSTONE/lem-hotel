@@ -68,7 +68,7 @@ export const rooms = [
     image: '/assets/Images/img6.jpg',
     available: true,
     amenities: ['King + 2 singles', 'Garden view', '36 m²', 'Free Wi-Fi', 'Breakfast included', 'Air conditioning'],
-  },
+  }, 
   {
     id: 'presidential-suite',
     name: { en: 'Presidential Suite', am: 'የፕሬዝዳንት ሱፕ', had: 'Presidential Suite' },

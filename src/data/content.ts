@@ -188,7 +188,7 @@ export const nearbySites = [
       '/assets/Images/attractions/ambericho1.webp',
       '/assets/Images/attractions/ambericho3.jpg',
     ],
-  },
+  }, 
   {
     name: { en: 'Bezabih Petros Site', am: 'በዛብህ ጴጥሮስ የክብር ሀውልት', had: 'Bezabih Petros' },
     desc: { en: 'A notable local landmark connected to the area\'s culture and history, often visited during local tours.', am: 'ከአካባቢው ባህል እና ታሪክ ጋር በተያያዘ የታወቀ ቦታ።', had: 'Known local landmark tied to culture and history.' },

@@ -158,7 +158,7 @@ export const nearbySites = [
       '/assets/Images/attractions/ajora6.webp',
       '/assets/Images/attractions/ajoras.webp',
     ],
-  },
+  }, 
   {
     name: { en: 'Tiya Stones', am: 'ጥያ ትክል ድንጋዮች', had: 'Tiya Stones' },
     desc: { en: 'A UNESCO World Heritage Site — ancient stelae carved with mysterious symbols, dating back to the 10th century.', am: 'የዩኔስኮ የዓለም ቅርስ — ጥንታዊ ድንጋዮች።', had: 'UNESCO site, ancient stelae.' },

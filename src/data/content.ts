@@ -228,7 +228,7 @@ export const t = {
     eyebrow: { en: 'A gentler way to arrive', am: 'ተረጋግተው የሚደርሱበት መንገድ', had: 'Xiqqa xiiya gorsu' },
     title1: { en: 'Stay awhile.', am: 'ትንሽ ቆይ።', had: 'Xiqqa baaru.' },
     title2: { en: 'Feel at home.', am: 'እንደ ቤትዎ ይሰማዎ።', had: 'Lampe geeshsha.' },
-    welcome: { en: 'Welcome to Lem.', am: 'ወደ ሌም እንኳን በደህና መጡ።', had: 'Lem gidaa welcome.' },
+    welcome: { en: 'Welcome to Lema Hotel.', am: 'ወደ ለማ ሆቴል እንኳን በደህና መጡ።', had: 'Lem gidaa welcome.' },
     copy: { en: 'A quiet, considered hotel in the heart of Hossana. Come for the view, stay for the warmth.', am: 'በሆሳዕና ልብ ውስጥ ቅንነት ያለው ሆቴል።', had: 'Hossana giddo quiet hotel.' },
     cta1: { en: 'Find your room', am: 'አልጋዎን ያግኙ', had: 'Baatta kaawi' },
     cta2: { en: 'Watch our story', am: 'ታሪካችንን ይመልከቱ', had: 'Story aayi' },

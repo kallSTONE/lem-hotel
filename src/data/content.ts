@@ -283,7 +283,7 @@ export const t = {
     perNight: { en: '/ night', am: '/ ምሽት', had: '/ hawaro' },
     amenities: { en: 'Amenities', am: 'መመለሻዎች', had: 'Amenities' },
     bookThis: { en: 'Book this room', am: 'ይህን ክፍል ይያዙ', had: 'Baatta daqqi' },
-  },
+  }, 
   menu: {
     title: { en: 'Our Menu', am: 'ምናችን', had: 'Mennu' },
     subtitle: { en: 'A celebration of Ethiopian flavours, served with care. Every dish is made fresh to order.', am: 'የኢትዮጵያ ጣዕሞች በጥንቃቄ የተዘጋጁ።', had: 'Ethiopian flavours, fresh.' },

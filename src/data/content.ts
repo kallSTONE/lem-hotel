@@ -146,7 +146,7 @@ export const nearbySites = [
   {
     name: { en: 'Ajora Waterfall', am: 'አጆራ ፏፏቴ', had: 'Ajora Fisha' },
     desc: { en: 'A stunning twin waterfall nestled in the Hossana countryside. A short drive from the hotel, best visited in the morning light.', am: 'በሆሳዕና አካባቢ ያለ ትልቅ መንትያ የውሃ ፏፏቴ።', had: 'Twin waterfall near Hossana.' },
-    distance: '18 km',
+    distance: '18 km', 
     image: '/assets/Images/attractions/ajora.webp',
     Images: [
       '/assets/Images/attractions/ajora.webp',

@@ -90,7 +90,7 @@ export const rooms = [
     name: { en: 'Garden Deluxe', am: 'ገርደን ዲሉክስ', had: 'Garden Deluxe' },
     desc: {
       en: 'A serene ground-floor room opening directly onto the courtyard garden. Wake up to birdsong and morning light.',
-      am: 'ለአትክልት አደባባይ የሚከፈት ምርጥ ክፍል።',
+      am: 'ለአትክልት አደባባይ የሚያሳይ ምርጥ ክፍል።',
       had: 'Ground-floor room, courtyard garden giddo xiiya.',
     },
     price: 3200,

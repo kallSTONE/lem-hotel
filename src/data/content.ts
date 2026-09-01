@@ -120,6 +120,8 @@ export const menuItems = [
   { id: 'm12', name: { en: 'Avocado Toast', am: 'አቮካዶ ቶስት', had: 'Avocado Toast' }, desc: { en: 'Sourdough toast with smashed avocado, chili flakes, and a poached egg.', am: 'ከአቮካዶ እና እንቁላል ጋር የተዘጋጀ ቶስት።', had: 'Avocado, sourdough, egg.' }, price: 240, category: 'breakfast' as MenuCategory, image: '/assets/Images/img14.jpg', tags: ['vegetarian'] },
 ]; 
 
+
+
 export const galleryImages = [
   { url: '/assets/Images/NightView.jpg', caption: { en: 'Poolside at sunset', am: 'በመጨረሻ ጊዜ የባለቤት ክፍል', had: 'Pool at sunset' }, category: 'amenities' },
   { url: '/assets/Images/img3.jpg', caption: { en: 'Executive Suite', am: 'አገር አስተዳደር ሱፕ', had: 'Executive Suite' }, category: 'rooms' },

@@ -127,7 +127,7 @@ export const galleryImages = [
   { url: '/assets/Images/img3.jpg', caption: { en: 'Executive Suite', am: 'አገር አስተዳደር ሱፕ', had: 'Executive Suite' }, category: 'rooms' },
   { url: '/assets/Images/LemHotelVenue.jpg', caption: { en: 'Dining under the stars', am: 'በኮከቦች ስር ምግብ', had: 'Dining under stars' }, category: 'dining' }, 
   { url: '/assets/Images/Stage.jpg', caption: { en: 'Spa & wellness', am: 'ስፓ እና ጤና', had: 'Spa & wellness' }, category: 'amenities' },
-  { url: '/assets/Images/LemHotelGate.jpg', caption: { en: 'The courtyard', am: 'አደባባይ', had: 'Courtyard' }, category: 'amenities' },
+  { url: '/assets/Images/LemHotelGate.jpg', caption: { en: 'The courtyard', am: 'አደባባይ', had: 'Courtyard' }, category: 'amenities' }, 
   { url: '/assets/Images/img2.jpg', caption: { en: 'Deluxe King', am: 'ዲሉክስ ኪንግ', had: 'Deluxe King' }, category: 'rooms' },
   { url: '/assets/Images/lemhotelbar2.jpg', caption: { en: 'Doro Wat', am: 'የዶሮ ወጥ', had: 'Doro Wat' }, category: 'dining' },
   { url: '/assets/Images/Coridor.jpg', caption: { en: 'The lobby', am: 'መነሻ', had: 'Lobby' }, category: 'amenities' },

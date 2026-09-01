@@ -28,7 +28,7 @@ export const rooms = [
       en: 'Warm, elegant room with a plush king bed and garden-facing windows. Perfect for couples and solo travellers alike.',
       am: 'ሙቅ እና ምርጥ የንጉስ አልጋ እና የአትክልት ስፍራ እይታ መስኮት አለው።',
       had: 'Warme king bed, garden view window qoodi.',
-    },
+    }, 
     price: 3650,
     size: '28 m²',
     bed: 'King',

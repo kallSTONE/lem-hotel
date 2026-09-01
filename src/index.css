@@ -1447,6 +1447,64 @@ footer .footer-brand {
   border: 1px solid rgba(231, 224, 213, 0.9);
 }
 
+.video-modal {
+  position: relative;
+
+  width: min(920px, 100%);
+
+  padding: 28px;
+
+  background: rgba(8, 18, 34, 0.96);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.35);
+
+  color: #fff;
+}
+
+.video-modal h2 {
+  margin-top: 8px;
+
+  font-size: clamp(24px, 3vw, 36px);
+
+  color: #fff;
+}
+
+.video-modal-frame {
+  margin-top: 20px;
+
+  position: relative;
+
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: #000;
+}
+
+.video-modal-frame iframe {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+}
+
+.video-modal-close {
+  color: #fff;
+}
+
+.video-modal-close:hover {
+  color: var(--cream);
+}
+
 .close-modal {
   position: absolute;
 

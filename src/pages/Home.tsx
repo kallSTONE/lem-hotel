@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, ChevronDown, Coffee, Play, Sparkles, Star, Utensils } from 'lucide-react';
+import { ArrowUpRight, ChevronDown, Coffee, Play, Sparkles, Star, Utensils, X } from 'lucide-react';
 import { useLang } from '@/context/LangContext';
 import { t, tr, rooms } from '@/data/content';
    
@@ -17,6 +17,7 @@ const photos = {
 export default function Home({ onBook }: { onBook: () => void }) {
   const { lang } = useLang();
   const [heroIndex, setHeroIndex] = useState(0);
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
     
   useEffect(() => {
     setHeroIndex(0);
@@ -32,6 +33,22 @@ export default function Home({ onBook }: { onBook: () => void }) {
     return () => window.clearInterval(cycle);
   }, []);
 
+  useEffect(() => {
+    if (!isVideoOpen) {
+      return;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsVideoOpen(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isVideoOpen]);
+
   const heroLines = [
     tr(t.hero.title1, lang), 
     tr(t.hero.welcome, lang)
@@ -45,7 +62,7 @@ export default function Home({ onBook }: { onBook: () => void }) {
           '--hero-desktop': `url(${photos.hero})`,
           '--hero-mobile': `url(${photos.heroMobile})`,
         }}
-      >. 
+      >
         <div className="hero-overlay" />
         <div className="hero-content">
           <p className="eyebrow light">{tr(t.hero.eyebrow, lang)}</p>
@@ -74,7 +91,7 @@ export default function Home({ onBook }: { onBook: () => void }) {
           <p className="hero-copy">{tr(t.hero.copy, lang)}</p>
           <div className="hero-actions">
             <button className="primary-button" onClick={onBook}>{tr(t.hero.cta1, lang)} <ArrowUpRight size={18} /></button>
-            <button className="play-button"><span><Play size={14} fill="currentColor" /></span> {tr(t.hero.cta2, lang)}</button>
+            <button className="play-button" type="button" onClick={() => setIsVideoOpen(true)}><span><Play size={14} fill="currentColor" /></span> {tr(t.hero.cta2, lang)}</button>
           </div>
         </div>
         <div className="hero-note"><span className="line" /> <span>HOSSANA / 07°33′S 037°51′E</span></div>
@@ -195,6 +212,26 @@ export default function Home({ onBook }: { onBook: () => void }) {
         </div>
         <button className="primary-button" onClick={onBook}>{tr(t.nav.book, lang)} <ArrowUpRight size={18} /></button>
       </section>
+
+      {isVideoOpen && (
+        <div className="modal-backdrop" onClick={() => setIsVideoOpen(false)}>
+          <div className="video-modal" onClick={(event) => event.stopPropagation()} role="dialog" aria-modal="true" aria-label="Hotel video player">
+            <button className="close-modal video-modal-close" type="button" onClick={() => setIsVideoOpen(false)} aria-label="Close video">
+              <X size={20} />
+            </button>
+            <p className="eyebrow">Featured video</p>
+            <h2>Experience Lem Hotel</h2>
+            <div className="video-modal-frame">
+              <iframe
+                src="https://www.youtube.com/embed/jSo36zjmFEg?autoplay=1&rel=0&modestbranding=1"
+                title="Lem Hotel video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }

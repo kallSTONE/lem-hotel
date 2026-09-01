@@ -141,7 +141,7 @@ export const staff = [
   { name: 'Solomon Abera', role: { en: 'Guest Relations', am: 'የእንግዶች ግንኙነት', had: 'Guest Relations' }, image: '/assets/Images/LemHotelCertificates.jpg', bio: { en: 'Solomon knows Hossana\'s every corner and loves sharing hidden gems with guests.', am: 'ሰሎሞን የሆሳዕናን ሁሉንም ጥልቅ ይወቃል።', had: 'Knows Hossana well.' } },
   { name: 'Marta Tola', role: { en: 'Housekeeping Manager', am: 'የቤት ጥበቃ አስተዳዳሪ', had: 'Housekeeping Manager' }, image: '/assets/Images/LemHotelTophies.jpg', bio: { en: 'Marta leads our housekeeping team with a quiet, meticulous care.', am: 'ማርታ የቤት ጥበቃ ቡድንን ትመራለች።', had: 'Leads housekeeping team.' } },
 ];
-
+   
 export const nearbySites = [
   {
     name: { en: 'Ajora Waterfall', am: 'አጆራ ፏፏቴ', had: 'Ajora Fisha' },

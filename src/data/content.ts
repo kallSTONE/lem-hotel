@@ -188,7 +188,7 @@ export const nearbySites = [
     Images: [
       '/assets/Images/attractions/ambericho.jpg',
       '/assets/Images/attractions/ambericho1.webp',
-      '/assets/Images/attractions/ambericho3.jpg',
+      '/assets/Images/attractions/ambericho3.jpg', 
     ],
   }, 
   {

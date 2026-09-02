@@ -134,7 +134,7 @@ export function Footer() {
       <p>{tr(t.footer.tagline, lang)}</p>
       <div className="footer-social">
         <span>{tr(t.footer.rights, lang)}</span>
-      </div>
+      </div> 
     </footer>
   );
 }

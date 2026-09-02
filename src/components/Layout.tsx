@@ -101,7 +101,7 @@ export function Navbar({ onBook, chromeVisible }: { onBook: () => void; chromeVi
           {navItems.map(item => (
             <Link key={item.to} to={item.to} className={location.pathname === item.to ? 'active' : ''} onClick={() => setMenuOpen(false)}>
               {item.label}
-            </Link>
+            </Link> 
           ))}
           <div className="mobile-nav-actions">
             <LanguageSwitch />

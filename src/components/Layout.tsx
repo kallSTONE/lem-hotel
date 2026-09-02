@@ -114,7 +114,7 @@ export function Navbar({ onBook, chromeVisible }: { onBook: () => void; chromeVi
           <LanguageSwitch />
           <Link className="admin-trigger" to="/admin"><LayoutDashboard size={15} /> {tr(t.nav.staff, lang)}</Link>
           <button className="book-button" onClick={onBook}>{tr(t.nav.book, lang)} <ArrowUpRight size={17} /></button>
-          <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-label="Open menu">
+          <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-label="Open menu"> 
             {menuOpen ? <X /> : <Menu />}
           </button>
         </div>

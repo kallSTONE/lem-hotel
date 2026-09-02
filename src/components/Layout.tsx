@@ -2,7 +2,7 @@ import { useState, useEffect, FormEvent, ReactNode } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ArrowUpRight, Bell, Check, ChevronDown, Globe, LayoutDashboard, Menu, X } from 'lucide-react';
 import { useLang } from '@/context/LangContext'; 
-import { t, rooms, type Lang } from '@/data/content';
+import { t, rooms, type Lang } from '@/data/content'; 
  
 export function tr(obj: Record<string, string>, lang: Lang) {
   return obj[lang] || obj.en;

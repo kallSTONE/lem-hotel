@@ -223,9 +223,9 @@ export default function Home({ onBook }: { onBook: () => void }) {
             <h2>Experience Lem Hotel</h2>
             <div className="video-modal-frame">
               <iframe
-                src="https://www.youtube.com/embed/jSo36zjmFEg?autoplay=1&rel=0&modestbranding=1"
+                src="https://www.youtube.com/embed/y--2fNZ0sV8?autoplay=1&rel=0&modestbranding=1"
                 title="Lem Hotel video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
                 allowFullScreen
               />
             </div>

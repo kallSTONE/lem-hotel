@@ -1,9 +1,9 @@
 import { useState, useEffect, FormEvent, ReactNode } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ArrowUpRight, Bell, Check, ChevronDown, Globe, LayoutDashboard, Menu, X } from 'lucide-react';
-import { useLang } from '@/context/LangContext';
-import { t, rooms, type Lang } from '@/data/content';
-
+import { useLang } from '@/context/LangContext'; 
+import { t, rooms, type Lang } from '@/data/content'; 
+  
 export function tr(obj: Record<string, string>, lang: Lang) {
   return obj[lang] || obj.en;
 }
@@ -29,11 +29,11 @@ export function BookingModal({ open, onClose }: { open: boolean; onClose: () => 
             <p className="eyebrow">{tr(t.booking.title, lang) === tr(t.booking.title, 'en') ? 'Make it yours' : tr(t.booking.title, lang)}</p>
             <h2>{tr(t.booking.title, lang)} <em>{tr(t.booking.title2, lang)}</em></h2>
             <p className="modal-intro">{tr(t.booking.intro, lang)}</p>
-            <form onSubmit={(e: FormEvent) => { e.preventDefault(); setSent(true); }}>
+            <form onSubmit={(e: FormEvent) => { e.preventDefault(); setSent(true); }}> 
               <div className="form-row">
-                <label>{tr(t.booking.firstName, lang)}<input required placeholder={tr(t.booking.firstName, lang)} /></label>
+                <label>{tr(t.booking.firstName, lang)}<input required placeholder={tr(t.booking.firstName, lang)} /></label> 
                 <label>{tr(t.booking.lastName, lang)}<input required placeholder={tr(t.booking.lastName, lang)} /></label>
-              </div>
+              </div> 
               <label>{tr(t.booking.email, lang)}<input required type="email" placeholder="you@example.com" /></label>
               <div className="form-row">
                 <label>{tr(t.booking.checkin, lang)}<input required type="date" /></label>
@@ -42,12 +42,12 @@ export function BookingModal({ open, onClose }: { open: boolean; onClose: () => 
               <label>{tr(t.booking.roomPref, lang)}
                 <select>{rooms.map(r => <option key={r.id}>{tr(r.name, lang)}</option>)}</select>
               </label>
-              <button className="primary-button full-width" type="submit">{tr(t.booking.submit, lang)} <ArrowUpRight size={18} /></button>
+              <button className="primary-button full-width" type="submit">{tr(t.booking.submit, lang)} <ArrowUpRight size={18} /></button> 
             </form>
-          </>
+          </> 
         )}
       </div>
-    </div>
+    </div> 
   );
 }
 
@@ -62,7 +62,7 @@ export function LanguageSwitch() {
   const current = langs.find(l => l.code === lang)!;
   return (
     <div className="lang-switch">
-      <button onClick={() => setOpen(!open)} className={open ? 'active' : ''}>
+      <button onClick={() => setOpen(!open)} className={open ? 'active' : ''}> 
         <Globe size={15} /> {current.short} <ChevronDown size={13} className={open ? 'rotated' : ''} />
       </button>
       {open && (
@@ -96,25 +96,25 @@ export function Navbar({ onBook, chromeVisible }: { onBook: () => void; chromeVi
         <Link className="brand" to="/">
           <img src="/image.png" alt="Lema Hotel" />
           <span>LEMA HOTEL<small>HOSSANA · ETHIOPIA</small></span>
-        </Link>
-        <nav className={menuOpen ? 'nav-links mobile-visible' : 'nav-links'}>
+        </Link>  
+        <nav className={menuOpen ? 'nav-links mobile-visible' : 'nav-links'}> 
           {navItems.map(item => (
-            <Link key={item.to} to={item.to} className={location.pathname === item.to ? 'active' : ''} onClick={() => setMenuOpen(false)}>
+            <Link key={item.to} to={item.to} className={location.pathname === item.to ? 'active' : ''} onClick={() => setMenuOpen(false)}> 
               {item.label}
-            </Link>
+            </Link> 
           ))}
           <div className="mobile-nav-actions">
             <LanguageSwitch />
             <Link className="admin-trigger mobile-admin-trigger" to="/admin" onClick={() => setMenuOpen(false)}>
               <LayoutDashboard size={15} /> {tr(t.nav.staff, lang)}
             </Link>
-          </div>
+          </div>  
         </nav>
         <div className="nav-actions">
-          <LanguageSwitch />
+          <LanguageSwitch />  
           <Link className="admin-trigger" to="/admin"><LayoutDashboard size={15} /> {tr(t.nav.staff, lang)}</Link>
           <button className="book-button" onClick={onBook}>{tr(t.nav.book, lang)} <ArrowUpRight size={17} /></button>
-          <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-label="Open menu">
+          <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-label="Open menu"> 
             {menuOpen ? <X /> : <Menu />}
           </button>
         </div>
@@ -134,7 +134,7 @@ export function Footer() {
       <p>{tr(t.footer.tagline, lang)}</p>
       <div className="footer-social">
         <span>{tr(t.footer.rights, lang)}</span>
-      </div>
+      </div> 
     </footer>
   );
 }
@@ -143,14 +143,15 @@ export function FloatingBookButton({ onBook, visible }: { onBook: () => void; vi
   const { lang } = useLang();
   return (
     <button className={`floating-book ${visible ? 'visible' : ''}`} onClick={onBook}>
-      {tr(t.nav.book, lang)} <ArrowUpRight size={18} />
-    </button>
-  );
+      {tr(t.nav.book, lang)} <ArrowUpRight size={18} /> 
+    </button> 
+  ); 
 }
+ 
 
 export function PageHeader({ title, subtitle, image }: { title: ReactNode; subtitle: string; image: string }) {
   return (
-    <section className="page-header" style={{ backgroundImage: `url(${image})` }}>
+    <section className="page-header" style={{ backgroundImage: `url(${image})` }}> 
       <div className="page-header-overlay" />
       <div className="page-header-content">
         <h1>{title}</h1>

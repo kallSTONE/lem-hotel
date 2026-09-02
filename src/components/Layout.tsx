@@ -33,7 +33,7 @@ export function BookingModal({ open, onClose }: { open: boolean; onClose: () => 
               <div className="form-row">
                 <label>{tr(t.booking.firstName, lang)}<input required placeholder={tr(t.booking.firstName, lang)} /></label> 
                 <label>{tr(t.booking.lastName, lang)}<input required placeholder={tr(t.booking.lastName, lang)} /></label>
-              </div>
+              </div> 
               <label>{tr(t.booking.email, lang)}<input required type="email" placeholder="you@example.com" /></label>
               <div className="form-row">
                 <label>{tr(t.booking.checkin, lang)}<input required type="date" /></label>

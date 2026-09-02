@@ -151,7 +151,7 @@ export function FloatingBookButton({ onBook, visible }: { onBook: () => void; vi
 
 export function PageHeader({ title, subtitle, image }: { title: ReactNode; subtitle: string; image: string }) {
   return (
-    <section className="page-header" style={{ backgroundImage: `url(${image})` }}>
+    <section className="page-header" style={{ backgroundImage: `url(${image})` }}> 
       <div className="page-header-overlay" />
       <div className="page-header-content">
         <h1>{title}</h1>

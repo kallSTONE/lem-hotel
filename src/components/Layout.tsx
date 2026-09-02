@@ -97,7 +97,7 @@ export function Navbar({ onBook, chromeVisible }: { onBook: () => void; chromeVi
           <img src="/image.png" alt="Lema Hotel" />
           <span>LEMA HOTEL<small>HOSSANA · ETHIOPIA</small></span>
         </Link> 
-        <nav className={menuOpen ? 'nav-links mobile-visible' : 'nav-links'}>
+        <nav className={menuOpen ? 'nav-links mobile-visible' : 'nav-links'}> 
           {navItems.map(item => (
             <Link key={item.to} to={item.to} className={location.pathname === item.to ? 'active' : ''} onClick={() => setMenuOpen(false)}>
               {item.label}

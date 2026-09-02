@@ -42,7 +42,7 @@ export function BookingModal({ open, onClose }: { open: boolean; onClose: () => 
               <label>{tr(t.booking.roomPref, lang)}
                 <select>{rooms.map(r => <option key={r.id}>{tr(r.name, lang)}</option>)}</select>
               </label>
-              <button className="primary-button full-width" type="submit">{tr(t.booking.submit, lang)} <ArrowUpRight size={18} /></button>
+              <button className="primary-button full-width" type="submit">{tr(t.booking.submit, lang)} <ArrowUpRight size={18} /></button> 
             </form>
           </>
         )}

@@ -29,7 +29,7 @@ export function BookingModal({ open, onClose }: { open: boolean; onClose: () => 
             <p className="eyebrow">{tr(t.booking.title, lang) === tr(t.booking.title, 'en') ? 'Make it yours' : tr(t.booking.title, lang)}</p>
             <h2>{tr(t.booking.title, lang)} <em>{tr(t.booking.title2, lang)}</em></h2>
             <p className="modal-intro">{tr(t.booking.intro, lang)}</p>
-            <form onSubmit={(e: FormEvent) => { e.preventDefault(); setSent(true); }}>
+            <form onSubmit={(e: FormEvent) => { e.preventDefault(); setSent(true); }}> 
               <div className="form-row">
                 <label>{tr(t.booking.firstName, lang)}<input required placeholder={tr(t.booking.firstName, lang)} /></label> 
                 <label>{tr(t.booking.lastName, lang)}<input required placeholder={tr(t.booking.lastName, lang)} /></label>

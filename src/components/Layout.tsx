@@ -108,7 +108,7 @@ export function Navbar({ onBook, chromeVisible }: { onBook: () => void; chromeVi
             <Link className="admin-trigger mobile-admin-trigger" to="/admin" onClick={() => setMenuOpen(false)}>
               <LayoutDashboard size={15} /> {tr(t.nav.staff, lang)}
             </Link>
-          </div> 
+          </div>  
         </nav>
         <div className="nav-actions">
           <LanguageSwitch /> 

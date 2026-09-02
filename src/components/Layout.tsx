@@ -62,7 +62,7 @@ export function LanguageSwitch() {
   const current = langs.find(l => l.code === lang)!;
   return (
     <div className="lang-switch">
-      <button onClick={() => setOpen(!open)} className={open ? 'active' : ''}>
+      <button onClick={() => setOpen(!open)} className={open ? 'active' : ''}> 
         <Globe size={15} /> {current.short} <ChevronDown size={13} className={open ? 'rotated' : ''} />
       </button>
       {open && (

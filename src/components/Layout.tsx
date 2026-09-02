@@ -44,7 +44,7 @@ export function BookingModal({ open, onClose }: { open: boolean; onClose: () => 
               </label>
               <button className="primary-button full-width" type="submit">{tr(t.booking.submit, lang)} <ArrowUpRight size={18} /></button> 
             </form>
-          </>
+          </> 
         )}
       </div>
     </div> 

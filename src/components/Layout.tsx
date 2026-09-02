@@ -47,7 +47,7 @@ export function BookingModal({ open, onClose }: { open: boolean; onClose: () => 
           </>
         )}
       </div>
-    </div>
+    </div> 
   );
 }
 

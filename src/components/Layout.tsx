@@ -99,7 +99,7 @@ export function Navbar({ onBook, chromeVisible }: { onBook: () => void; chromeVi
         </Link>  
         <nav className={menuOpen ? 'nav-links mobile-visible' : 'nav-links'}> 
           {navItems.map(item => (
-            <Link key={item.to} to={item.to} className={location.pathname === item.to ? 'active' : ''} onClick={() => setMenuOpen(false)}>
+            <Link key={item.to} to={item.to} className={location.pathname === item.to ? 'active' : ''} onClick={() => setMenuOpen(false)}> 
               {item.label}
             </Link> 
           ))}

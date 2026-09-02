@@ -143,7 +143,7 @@ export function FloatingBookButton({ onBook, visible }: { onBook: () => void; vi
   const { lang } = useLang();
   return (
     <button className={`floating-book ${visible ? 'visible' : ''}`} onClick={onBook}>
-      {tr(t.nav.book, lang)} <ArrowUpRight size={18} />
+      {tr(t.nav.book, lang)} <ArrowUpRight size={18} /> 
     </button> 
   ); 
 }

@@ -618,7 +618,7 @@ img {
   position: relative;
   width: 118px;
   border-radius: 50%;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(248, 243, 235, 0.96) 100%);
+  background: transparent;
   border: 2px solid rgba(255, 215, 100, 0.3);
   display: flex;
   flex-direction: column;
@@ -645,8 +645,8 @@ img {
 }
 
 .service-circle-image {
-  width: 90px;
-  height: 90px;
+  width: 95px;
+  height: 95px;
   margin-top: 2px;
   border-radius: 50%;
   background-position: center;
@@ -3875,11 +3875,10 @@ footer .footer-brand {
   }
 
   .services-circles {
-    margin-top: -90px;
+    margin-top: -94px;
     gap: 12px;
     margin-left: 2%;
     margin-right: 2%;
-    border: #f70707 solid 4px;
   }
 
   .service-circle {

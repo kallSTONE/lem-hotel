@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type CSSProperties } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight, ChevronDown, Coffee, Play, Sparkles, Star, Utensils, X, Bed, UtensilsCrossed, Building2, Wifi } from 'lucide-react';
 import { useLang } from '@/context/LangContext';
@@ -31,13 +31,13 @@ const services = [
     id: 'venue',
     name: { en: 'Venue', am: 'ቦታ', had: 'Venue' },
     icon: Building2,
-    image: '/assets/Images/lemhotelvenue.webp',
+    image: '/assets/Images/LemHotelVenue.webp',
   },
   {
     id: 'wifi',
     name: { en: 'Free WiFi', am: 'ነጻ ዋይ ፋይ', had: 'Free WiFi' },
     icon: Wifi,
-    image: '/assets/Images/coridor.webp',
+    image: '/assets/Images/Coridor.webp',
   },
 ];    
      
@@ -89,7 +89,7 @@ export default function Home({ onBook }: { onBook: () => void }) {
         style={{
           '--hero-desktop': `url(${activeService ? services.find(s => s.id === activeService)?.image : photos.hero})`,
           '--hero-mobile': `url(${activeService ? services.find(s => s.id === activeService)?.image : photos.heroMobile})`,
-        } as React.CSSProperties}
+        } as CSSProperties}
       >
         <div className="hero-overlay" />
         <div className="hero-content">
@@ -137,11 +137,16 @@ export default function Home({ onBook }: { onBook: () => void }) {
               type="button"
               aria-label={tr(service.name, lang)}
             >
+              <div className="service-circle-image" style={{ backgroundImage: `url(${service.image})` }} />
+              <div className="service-circle-icon">
+                <IconComponent size={18} />
+              </div>
               <div className="service-circle-content">
-                <IconComponent size={32} />
                 <h4>{tr(service.name, lang)}</h4>
               </div>
             </button>
+
+            
           );
         })}
       </div>

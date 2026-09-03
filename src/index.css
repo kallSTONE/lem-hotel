@@ -597,6 +597,75 @@ img {
    BOOKING BAR
    ========================================================= */
 
+/* =========================================================
+   HERO CIRCLE OVERLAP
+   ========================================================= */
+
+.services-circles {
+  position: relative;
+  margin-top: -110px;
+  margin-left: 3%;
+  margin-right: 3%;
+  z-index: 3;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  padding-left: 0;
+}
+
+.service-circle {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(8, 30, 50, 0.92) 0%, rgba(20, 50, 80, 0.92) 100%);
+  border: 2px solid rgba(255, 215, 100, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.service-circle:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 215, 100, 0.5);
+}
+
+.service-circle.active {
+  border: 2px solid rgba(255, 215, 100, 0.8);
+  box-shadow: 0 0 24px rgba(255, 215, 100, 0.6), 0 12px 32px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, rgba(8, 30, 50, 0.98) 0%, rgba(20, 50, 80, 0.98) 100%);
+}
+
+.service-circle-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+}
+
+.service-circle-content svg {
+  color: rgba(255, 215, 100, 0.9);
+}
+
+.service-circle h4 {
+  font-size: 11px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: #fff;
+}
+
 .booking-bar {
   margin: -34px 5% 0;
 
@@ -3780,6 +3849,20 @@ footer .footer-brand {
     display: none;
   }
 
+  .hero-circle {
+    margin-top: -100px;
+    width: 240px;
+    height: 240px;
+  }
+
+  .circle-content h3 {
+    font-size: 16px;
+  }
+
+  .circle-logo {
+    font-size: 42px;
+  }
+
   .booking-bar {
     margin: 0;
 
@@ -4122,6 +4205,26 @@ footer .footer-brand {
 
   .play-button {
     margin-top: 0;
+  }
+
+  .hero-circle {
+    margin-top: -80px;
+    margin-left: 2%;
+    width: 200px;
+    height: 200px;
+  }
+
+  .circle-content h3 {
+    font-size: 14px;
+  }
+
+  .circle-logo {
+    font-size: 36px;
+    margin-bottom: 8px;
+  }
+
+  .circle-content p {
+    font-size: 10px;
   }
 
   .floating-book {

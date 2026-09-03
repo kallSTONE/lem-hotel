@@ -1,133 +1,285 @@
-import { useEffect, type CSSProperties } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { BedDouble, Clock3, MapPin, Utensils, Wifi, ArrowUpRight } from 'lucide-react';
-
+import { ArrowUpRight, ChevronDown, Coffee, Play, Sparkles, Star, Utensils, X, Bed, UtensilsCrossed, Building2, Wifi } from 'lucide-react';
+import { useLang } from '@/context/LangContext';
+import { t, tr, rooms } from '@/data/content';
+   
 const photos = {
+  heroMobile: '/assets/Images/welcome-Phone.webp',
   hero: '/assets/Images/welcome.webp',
-  room: '/assets/Images/img3.webp',
-  restaurant: '/assets/Images/LemHotelVenue.webp',
-  corridor: '/assets/Images/Stage.webp',
-  lounge: '/assets/Images/NightView.webp',
+  room: '/assets/Images/img3.webp', 
+  roomTwo: '/assets/Images/img2.webp', 
+  dining: '/assets/Images/LemHotelVenue.webp', 
+  pool: '/assets/Images/NightView.webp', 
+  spa: '/assets/Images/Stage.webp', 
 };
 
-type HomeProps = {
-  onBook: () => void;
-};
-
-const amenities = [
-  { icon: BedDouble, title: 'COMFORTABLE', subtitle: 'ROOMS' },
-  { icon: Utensils, title: 'RESTAURANT', subtitle: '& BAR' },
-  { icon: Wifi, title: 'FREE', subtitle: 'WI-FI' },
-  { icon: Clock3, title: '24/7', subtitle: 'SERVICE' },
-];
-
-export default function Home({ onBook }: HomeProps) {
+const services = [
+  {
+    id: 'rooms',
+    name: { en: 'Rooms', am: 'ክፍሎች', had: 'Rooms' },
+    icon: Bed,
+    image: '/assets/Images/room1.webp',
+  },
+  {
+    id: 'restaurant',
+    name: { en: 'Restaurant', am: 'ምግብ ቤት', had: 'Restaurant' },
+    icon: UtensilsCrossed,
+    image: '/assets/Images/restaurant.webp',
+  },
+  {
+    id: 'venue',
+    name: { en: 'Venue', am: 'ቦታ', had: 'Venue' },
+    icon: Building2,
+    image: '/assets/Images/lemhotelvenue.webp',
+  },
+  {
+    id: 'wifi',
+    name: { en: 'Free WiFi', am: 'ነጻ ዋይ ፋይ', had: 'Free WiFi' },
+    icon: Wifi,
+    image: '/assets/Images/coridor.webp',
+  },
+];    
+     
+export default function Home({ onBook }: { onBook: () => void }) {
+  const { lang } = useLang();
+  const [heroIndex, setHeroIndex] = useState(0);
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [activeService, setActiveService] = useState<string | null>(null);
+    
   useEffect(() => {
-    document.body.classList.add('lem-home-redesign');
-    return () => document.body.classList.remove('lem-home-redesign');
+    setHeroIndex(0);
+  }, [lang]);   
+  
+ 
+  useEffect(() => {
+    const cycle = window.setInterval(() => {
+      setHeroIndex((current: number) => (current === 0 ? 1 : 0));
+    }, 4200);
+
+      
+    return () => window.clearInterval(cycle);
   }, []);
 
+  useEffect(() => {
+    if (!isVideoOpen) {
+      return;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsVideoOpen(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isVideoOpen]);
+
+  const heroLines = [
+    tr(t.hero.title1, lang), 
+    tr(t.hero.welcome, lang)
+  ];
+
   return (
-    <main className="lem-home">
+    <main>
       <section
-        className="lem-home-hero"
-        style={{ '--lem-hero-image': `url(${photos.hero})` } as CSSProperties}
+        className="hero"
+        style={{
+          '--hero-desktop': `url(${activeService ? services.find(s => s.id === activeService)?.image : photos.hero})`,
+          '--hero-mobile': `url(${activeService ? services.find(s => s.id === activeService)?.image : photos.heroMobile})`,
+        } as React.CSSProperties}
       >
-        <div className="lem-hero-photo" aria-hidden="true" />
+        <div className="hero-overlay" />
+        <div className="hero-content">
+          <p className="eyebrow light">{tr(t.hero.eyebrow, lang)}</p>
+          <h1 className="hero-title" aria-live="polite">
+            <span className="hero-title-rotator">
+              {heroLines.map((line, index) => (
+                <span
+                  key={`${line}-${lang}`}
+                  className={
+                    index === heroIndex
+                      ? 'hero-title-layer active'
+                      : 'hero-title-layer'
+                  }
+                >
+                  {line}
 
-        <div className="lem-hero-panel">
-          <div className="lem-hero-pattern" aria-hidden="true" />
-          <div className="lem-hero-copy">
-            <p className="lem-kicker">WELCOME TO</p>
-            <h1>
-              LEM
-              <br />
-              HOTEL
-              <br />
-              HOSSANA
-            </h1>
-            <span className="lem-rule" />
-            <a className="lem-phone" href="tel:0996702253">
-              phone no.: 0996702253
-            </a>
+                  {index === 0 && (
+                    <span className="hero-title-secondary">
+                      <em>{tr(t.hero.title2, lang)}</em>
+                    </span>
+                  )}
+                </span>
+              ))}
+            </span>
+          </h1>
+          <p className="hero-copy">{tr(t.hero.copy, lang)}</p>
+          <div className="hero-actions">
+            <button className="primary-button" onClick={onBook}>{tr(t.hero.cta1, lang)} <ArrowUpRight size={18} /></button>
+            <button className="play-button" type="button" onClick={() => setIsVideoOpen(true)}><span><Play size={14} fill="currentColor" /></span> {tr(t.hero.cta2, lang)}</button>
           </div>
         </div>
-
-        <div className="lem-hero-badge" aria-label="Lem Hotel">
-          <span className="lem-badge-crown">♛</span>
-          <span className="lem-badge-initials">LM</span>
-          <span className="lem-badge-name">LEM HOTEL</span>
-          <small>HOSSANA</small>
-        </div>
+        <div className="hero-note"><span className="line" /> <span>HOSSANA / 07°33′S 037°51′E</span></div>
+        <div className="hero-scroll">{tr(t.hero.scroll, lang)} <ChevronDown size={16} /></div>
       </section>
 
-      <section className="lem-showcase">
-        <div className="lem-photo-row">
-          <figure>
-            <img src={photos.room} alt="Comfortable hotel room" />
-          </figure>
-          <figure>
-            <img src={photos.restaurant} alt="Hotel restaurant" />
-          </figure>
-          <figure>
-            <img src={photos.corridor} alt="Hotel corridor" />
-          </figure>
-          <figure>
-            <img src={photos.lounge} alt="Hotel lounge" />
-          </figure>
-        </div>
+      <div className="services-circles">
+        {services.map((service) => {
+          const IconComponent = service.icon;
+          return (
+            <button
+              key={service.id}
+              className={`service-circle ${activeService === service.id ? 'active' : ''}`}
+              onClick={() => setActiveService(activeService === service.id ? null : service.id)}
+              type="button"
+              aria-label={tr(service.name, lang)}
+            >
+              <div className="service-circle-content">
+                <IconComponent size={32} />
+                <h4>{tr(service.name, lang)}</h4>
+              </div>
+            </button>
+          );
+        })}
+      </div>
 
-        <div className="lem-amenities">
-          {amenities.map(({ icon: Icon, title, subtitle }) => (
-            <div className="lem-amenity" key={`${title}-${subtitle}`}>
-              <span className="lem-amenity-icon">
-                <Icon size={36} strokeWidth={1.7} />
-              </span>
-              <strong>{title}</strong>
-              <strong>{subtitle}</strong>
-            </div>
-          ))}
-        </div>
-
-        <div className="lem-divider" aria-hidden="true">
-          <span />
-          <i>✦</i>
-          <span />
-        </div>
-
-        <div className="lem-address">
-          <div className="lem-address-icon">
-            <MapPin size={34} strokeWidth={1.8} />
-          </div>
-          <div className="lem-address-label">ADDRESS:-</div>
-          <div className="lem-address-separator" />
-          <div className="lem-address-value">ሆሳዕና ከተማ</div>
-        </div>
-
-        <div className="lem-social-line">
-          <span>Lem International Hotel · 07–11</span>
-          <span>#lemhotel #ሆሳዕና #hossana</span>
-        </div>
+      <section className="booking-bar">
+        <div className="booking-field"><span className="field-icon">📅</span><label>{tr(t.booking.checkin, lang)} <strong>21 Aug 2026</strong></label></div>
+        <div className="booking-field"><span className="field-icon">📅</span><label>{tr(t.booking.checkout, lang)} <strong>24 Aug 2026</strong></label></div>
+        <div className="booking-field"><span className="field-icon">👥</span><label>{tr(t.booking.guests, lang)} <strong>2 adults, 1 room</strong></label></div>
+        <button onClick={onBook}>{tr(t.booking.check, lang)}</button>
       </section>
 
-      <section className="lem-action-strip">
+      <section className="intro section-pad">
+        <div className="intro-mark">L</div>
         <div>
-          <span>LEM HOTEL HOSSANA</span>
-          <p>Comfort, hospitality and a warm welcome in Hossana.</p>
+          <p className="eyebrow">{tr(t.sections.stayEyebrow, lang)}</p>
+          <h2>{tr(t.sections.stayTitle1, lang)}<br /><em>{tr(t.sections.stayTitle2, lang)}</em></h2>
         </div>
-        <button className="lem-book-button" onClick={onBook}>
-          BOOK NOW <ArrowUpRight size={17} />
-        </button>
+        <div className="intro-copy">
+          <p>{tr(t.hero.copy, lang)}</p>
+          <Link className="text-link" to="/rooms">{tr(t.sections.viewAll, lang)} <ArrowUpRight size={16} /></Link>
+        </div>
       </section>
 
-      {/* Mobile-only fallback navigation; desktop uses the site's existing navbar. */}
-      <nav className="lem-mobile-nav" aria-label="Home navigation">
-        <Link to="/">HOME</Link>
-        <Link to="/rooms">ROOMS</Link>
-        <Link to="/menu">RESTAURANT</Link>
-        <Link to="/gallery">GALLERY</Link>
-        <button type="button" onClick={onBook}>BOOK NOW</button>
-      </nav>
+      <section className="feature-section section-pad" id="stay">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">{tr(t.sections.stayEyebrow, lang)}</p>
+            <h2>{tr(t.sections.stayTitle1, lang)}<br /><em>{tr(t.sections.stayTitle2, lang)}</em></h2>
+          </div>
+          <Link className="text-link" to="/rooms">{tr(t.sections.viewAll, lang)} <ArrowUpRight size={16} /></Link>
+        </div>
+        <div className="room-grid">
+          <article className="room-card featured-room">
+            <img src={photos.room} alt={tr(rooms[0].name, lang)} />
+            <div className="room-info">
+              <div>
+                <p className="eyebrow">01 / 03</p>
+                <h3>{tr(rooms[0].name, lang)}</h3>
+                <span>{rooms[0].bed} · {tr(rooms[0].view, lang)} · {rooms[0].size}</span>
+              </div>
+              <div className="price">{tr(t.rooms.from, lang)} <strong>ETB {rooms[0].price.toLocaleString()}</strong> <ArrowUpRight size={17} /></div>
+            </div>
+          </article>
+          <article className="room-card">
+            <img src={photos.roomTwo} alt={tr(rooms[1].name, lang)} />
+            <div className="room-info">
+              <div>
+                <p className="eyebrow">02 / 03</p>
+                <h3>{tr(rooms[1].name, lang)}</h3>
+                <span>{rooms[1].bed} · {tr(rooms[1].view, lang)} · {rooms[1].size}</span>
+              </div>
+              <div className="price">{tr(t.rooms.from, lang)} <strong>ETB {rooms[1].price.toLocaleString()}</strong> <ArrowUpRight size={17} /></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section className="experience-grid">
+        <div className="experience-image" style={{ backgroundImage: `url(${photos.pool})` }}>
+          <div className="image-label">{tr(t.sections.expTitle1, lang)}<br /><span>{tr(t.sections.expTitle2, lang)}</span></div>
+        </div>
+        <div className="experience-copy">
+          <p className="eyebrow">{tr(t.sections.expEyebrow, lang)}</p>
+          <h2>{tr(t.sections.expTitle1, lang)}<br /><em>{tr(t.sections.expTitle2, lang)}</em></h2>
+          <p>{tr(t.hero.copy, lang)}</p>
+          <div className="amenity-list">
+            <div><Coffee size={21} /><span>{tr(t.about.value1, lang)}<small>{tr(t.about.value1Desc, lang)}</small></span></div>
+            <div><Utensils size={21} /><span>{tr(t.sections.diningTitle1, lang)}<small>{tr(t.sections.diningTitle2, lang)}</small></span></div>
+            <div><Sparkles size={21} /><span>{tr(t.about.value3, lang)}<small>{tr(t.about.value3Desc, lang)}</small></span></div>
+          </div>
+          <Link className="text-link" to="/menu">{tr(t.sections.diningTitle1, lang)} <ArrowUpRight size={16} /></Link>
+        </div>
+      </section>
+
+      <section className="dining-section section-pad">
+        <div className="dining-copy">
+          <p className="eyebrow">{tr(t.sections.diningEyebrow, lang)}</p>
+          <h2>{tr(t.sections.diningTitle1, lang)}<br /><em>{tr(t.sections.diningTitle2, lang)}</em></h2>
+          <p>{tr(t.menu.subtitle, lang)}</p>
+          <Link className="text-link" to="/menu">{tr(t.nav.menu, lang)} <ArrowUpRight size={16} /></Link>
+        </div>
+        <div className="dining-image" style={{ backgroundImage: `url(${photos.dining})` }}>
+          <span>{tr(t.menu.breakfast, lang)} · {tr(t.menu.lunch, lang)} · {tr(t.menu.dinner, lang)}</span>
+        </div>
+      </section>
+
+      <section className="quote-section">
+        <div className="quote-mark">"</div>
+        <blockquote>{tr(t.hero.copy, lang)}</blockquote>
+        <div className="quote-author">
+          <span className="avatar">N</span>
+          <span><strong>Nardos M.</strong><small>Guest since 2024</small></span>
+          <div className="stars"><Star size={13} fill="currentColor" /><Star size={13} fill="currentColor" /><Star size={13} fill="currentColor" /><Star size={13} fill="currentColor" /><Star size={13} fill="currentColor" /></div>
+        </div>
+      </section>
+
+      <section className="gallery-section section-pad">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">{tr(t.sections.galleryEyebrow, lang)}</p>
+            <h2>{tr(t.sections.galleryTitle1, lang)}<br /><em>{tr(t.sections.galleryTitle2, lang)}</em></h2>
+          </div>
+          <Link className="text-link" to="/gallery">{tr(t.nav.gallery, lang)} <ArrowUpRight size={16} /></Link>
+        </div>
+        <div className="gallery-grid">
+          <img className="gallery-large" src={photos.spa} alt="Spa" />
+          <img src={photos.pool} alt="Pool" />
+          <img src={rooms[1].image} alt="Room" />
+        </div>
+      </section>
+
+      <section className="footer-cta">
+        <div>
+          <p className="eyebrow light">{tr(t.hero.eyebrow, lang)}</p>
+          <h2>{tr(t.hero.title1, lang)}<br /><em>{tr(t.hero.title2, lang)}</em></h2>
+        </div>
+        <button className="primary-button" onClick={onBook}>{tr(t.nav.book, lang)} <ArrowUpRight size={18} /></button>
+      </section>
+
+      {isVideoOpen && (
+        <div className="modal-backdrop" onClick={() => setIsVideoOpen(false)}>
+          <div className="video-modal" onClick={(event) => event.stopPropagation()} role="dialog" aria-modal="true" aria-label="Hotel video player">
+            <button className="close-modal video-modal-close" type="button" onClick={() => setIsVideoOpen(false)} aria-label="Close video">
+              <X size={20} />
+            </button>
+            <p className="eyebrow">Featured video</p>
+            <h2>Experience Lem Hotel</h2>
+            <div className="video-modal-frame">
+              <iframe
+                src="https://www.youtube.com/embed/y--2fNZ0sV8?autoplay=1&rel=0&modestbranding=1"
+                title="Lem Hotel video"
+                allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }

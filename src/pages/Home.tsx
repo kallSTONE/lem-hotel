@@ -126,7 +126,7 @@ export default function Home({ onBook }: { onBook: () => void }) {
         <div className="hero-scroll">{tr(t.hero.scroll, lang)} <ChevronDown size={16} /></div>
       </section>
 
-      <div className="services-circles">
+      <div className="services-circles bg-transparent padding-0">
         {services.map((service) => {
           const IconComponent = service.icon;
           return (
@@ -146,7 +146,7 @@ export default function Home({ onBook }: { onBook: () => void }) {
               </div>
             </button>
 
-            
+
           );
         })}
       </div>

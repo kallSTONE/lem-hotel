@@ -35,7 +35,7 @@ const services = [
   },
   {
     id: 'wifi',
-    name: { en: 'Free-WiFi', am: 'ነጻ-ዋይፋይ', had: 'Free-WiFi' },
+    name: { en: 'Free-WiFi', am: 'ነጻ-ዋይፋይ', had: 'Free_WiFi' },
     icon: Wifi,
     image: '/assets/Images/Coridor.webp',
   },

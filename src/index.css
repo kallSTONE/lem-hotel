@@ -610,7 +610,7 @@ img {
   display: flex;
   flex-wrap: nowrap;
   gap: 20px;
-  justify-content: center;
+  justify-content: space-between;
   padding-left: 0;
   border: red solid 2px;
 }

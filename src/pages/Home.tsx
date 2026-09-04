@@ -23,7 +23,7 @@ const services = [
   },
   {
     id: 'restaurant',
-    name: { en: 'Restaurant', am: 'ምግብ ቤት', had: 'Restaurant' },
+    name: { en: 'Restaurant', am: 'ምግብ-ቤት', had: 'Restaurant' },
     icon: UtensilsCrossed,
     image: '/assets/Images/restaurant.webp',
   },
@@ -35,7 +35,7 @@ const services = [
   },
   {
     id: 'wifi',
-    name: { en: 'Free WiFi', am: 'ነጻ ዋይ ፋይ', had: 'Free WiFi' },
+    name: { en: 'Free-WiFi', am: 'ነጻ-ዋይፋይ', had: 'Free-WiFi' },
     icon: Wifi,
     image: '/assets/Images/Coridor.webp',
   },

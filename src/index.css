@@ -617,7 +617,8 @@ img {
 
 .service-circle {
   position: relative;
-  width: 90px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   background: transparent;
   border: 2px solid rgba(255, 216, 100, 0);
@@ -629,9 +630,8 @@ img {
   color: var(--navy);
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0);
   flex-shrink: 0;
-  padding: 10px 8px 12px;
 }
 
 .service-circle:hover {

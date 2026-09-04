@@ -142,7 +142,7 @@ export default function Home({ onBook }: { onBook: () => void }) {
                 <IconComponent size={18} />
               </div>
               <div className="service-circle-content">
-                <h4 className="border border blue-900 m-2">{tr(service.name, lang)}</h4>
+                <h4>{tr(service.name, lang)}</h4>
               </div>
             </button>
 

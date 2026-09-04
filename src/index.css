@@ -674,6 +674,7 @@ img {
   align-items: center;
   gap: 0;
   padding-top: 8px;
+  border: red solid 2px;
 }
 
 .service-circle-content svg {

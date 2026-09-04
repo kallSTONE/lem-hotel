@@ -670,6 +670,7 @@ img {
 
 .service-circle-content {
   display: flex;
+  width: fit-content;
   align-items: center;
   gap: 0;
   padding-top: 8px;
@@ -680,7 +681,8 @@ img {
   color: currentColor;
 }
 
-.service-circle h4 {
+.service-circle h4 {  
+  width: fit-content;
   font-size: 10px;
   font-weight: 600;
   margin: 0;

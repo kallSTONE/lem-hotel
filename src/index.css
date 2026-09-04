@@ -609,7 +609,7 @@ img {
   z-index: 3;
   display: flex;
   flex-wrap: nowrap;
-  gap: 120px;
+  gap: 135px;
   justify-content: center;
   padding-left: 0;
   border: red solid 2px;

@@ -122,8 +122,6 @@ export default function Home({ onBook }: { onBook: () => void }) {
             <button className="play-button" type="button" onClick={() => setIsVideoOpen(true)}><span><Play size={14} fill="currentColor" /></span> {tr(t.hero.cta2, lang)}</button>
           </div>
         </div>
-        <div className="hero-note"><span className="line" /> <span>HOSSANA / 07°33′S 037°51′E</span></div>
-        <div className="hero-scroll">{tr(t.hero.scroll, lang)} <ChevronDown size={16} /></div>
       </section>
 
       <div className="services-circles">

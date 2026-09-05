@@ -609,7 +609,7 @@ img {
   z-index: 3;
   display: flex;
   flex-wrap: nowrap;
-  gap: 170px;
+  gap: 175px;
   justify-content: center;
   padding-left: 0;
 }
@@ -693,7 +693,7 @@ img {
 }
 
 .booking-bar {
-  margin: 18px 5% 0;
+  margin: 32px 5% 0;
 
   position: relative;
   z-index: 2;

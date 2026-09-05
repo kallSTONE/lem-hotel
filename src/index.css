@@ -424,7 +424,7 @@ img {
   padding: clamp(120px, 22vh, 180px) 8% 88px;
 
   max-width: min(980px, 74vw);
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
 }
 
 .eyebrow {

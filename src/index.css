@@ -1453,7 +1453,7 @@ footer .footer-brand {
    ========================================================= */
 
 .floating-book {
-  display: flex;
+  display: none;
 
   position: fixed;
 

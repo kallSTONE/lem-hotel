@@ -609,7 +609,7 @@ img {
   z-index: 3;
   display: flex;
   flex-wrap: nowrap;
-  gap: 135px;
+  gap: 145px;
   justify-content: center;
   padding-left: 0;
 }
@@ -645,8 +645,8 @@ img {
 }
 
 .service-circle-image {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   margin-top: 2px;
   border-radius: 50%;
   background-position: center;

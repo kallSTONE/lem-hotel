@@ -331,7 +331,7 @@ export const t = {
     overview: { en: 'Overview', am: 'አጠቃላይ', had: 'Overview' },
     bookings: { en: 'Bookings', am: 'ተቀባይነቶች', had: 'Bookings' },
     tables: { en: 'Tables', am: 'ጠረጠሮች', had: 'Taable' },
-    reviews: { en: 'Reviews', am: 'ግምገማዎች', had: 'Reviews' },
+    reviews: { en: 'Reviews', am: 'ግምገማዎች', had: 'Reviews' }, 
     announcements: { en: 'Announcements', am: 'ማስታወቂያዎች', had: 'Announcements' },
     rooms: { en: 'Rooms', am: 'ክፍሎች', had: 'Baatte' },
     settings: { en: 'Settings', am: 'ቅንብሮች', had: 'Settings' },

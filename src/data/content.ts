@@ -308,7 +308,7 @@ export const t = {
     subtitle: { en: 'A hotel built on warmth, rooted in Hossana.', am: 'በሞቅ የተገነባ ሆቴል፣ በሆሳዕና የተተከለ።', had: 'Hotel built on warmth, Hossana.' },
     historyTitle: { en: 'The Lema Hotel story', am: 'የለማ ሆቴል ታሪክ', had: 'Lemma story' },
     historyP1: { en: 'Lema Hotel opened its doors in 2018, the dream of a family who wanted to share the warmth of Hossana with the world. What began as a small guesthouse has grown into a beloved hotel, known for its quiet comfort and genuine hospitality.', am: 'ሌም ሆቴል በ2018 ተከፈተ፣ የቤተሰብ ህልም ነበር። ከትንሽ መነሻ ወደ ታዋቂ ሆቴል ደረሰ።', had: 'Lemma 2018 galatino, family dream.' },
-    historyP2: { en: 'The name "Lema" comes from the Name of Former Owner of the Hotel and the Founder of this Legacy and the Father of the current owners — the feeling we want every guest to carry home.', am: 'የሌም ስም ከሐዲይኛ ቃል የመጣ ነው — ሰላምን ያመለክታል።', had: 'Lemma means peace in Hadiyissa.' },
+    historyP2: { en: 'The name "Lema" comes from the Name of Former Owner of the Hotel and the Founder of this Legacy and the Father of the current owners — the feeling we want every guest to carry home.', am: 'የለማ ሆቴል ስም ከ አቶ ለማ ኑኔ ከመስራች እና ባለቤት ስም የመጣ ነው።', had: 'Lemma means peace in Hadiyissa.' },
     valuesTitle: { en: 'What we believe', am: 'የምናምንበት', had: 'Neegi' },
     value1: { en: 'Genuine warmth', am: 'እውነተኛ ሞቅ', had: 'Genuine warmth' },
     value1Desc: { en: 'Every guest is welcomed as family, not as a transaction.', am: 'እያንዳንዱ እንግዳ እንደ ቤተሰብ ይቀበላል።', had: 'Every guest family.' },

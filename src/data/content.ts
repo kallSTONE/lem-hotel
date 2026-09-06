@@ -313,7 +313,7 @@ export const t = {
     value1: { en: 'Genuine warmth', am: 'እውነተኛ ሞቅ', had: 'Genuine warmth' },
     value1Desc: { en: 'Every guest is welcomed as family, not as a transaction.', am: 'እያንዳንዱ እንግዳ እንደ ቤተሰብ ይቀበላል።', had: 'Every guest family.' },
     value2: { en: 'Local roots', am: 'የአካባቢ ሥር', had: 'Local roots' },
-    value2Desc: { en: 'We source from Hossana\'s farmers and artisans, and celebrate Hadiyissa culture.', am: 'ከሆሳዕና አርሶ አደሮች እና ከእጅ ባለሙያዎች እንበላለን።', had: 'Source from Hossana.' },
+    value2Desc: { en: 'We source from Hossana\'s farmers and artisans, and celebrate Hadiyissa culture.', am: 'በሆሳዕና አርሶ አደሮች እና የእጅ ባለሙያዎች የተሰሩ ምግቦችን እንበላለን።', had: 'Source from Hossana.' },
     value3: { en: 'Quiet comfort', am: 'ጸጥተኛ ምቾት', had: 'Quiet comfort' },
     value3Desc: { en: 'Our spaces are designed for rest — no noise, no rush, just ease.', am: 'ለመውለድ የተዘጋጁ ቦታዎች — ያለ ድምፅ፣ ያለ ትንኮስ።', had: 'Spaces for rest.' },
     teamTitle: { en: 'The people of Lema', am: 'የሌም ሰዎች', had: 'Lemma people' },

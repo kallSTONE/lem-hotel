@@ -321,7 +321,7 @@ export const t = {
   },
   nearby: {
     title: { en: 'Nearby Attractions', am: 'በአቅራቢያ ያሉ ቦታዎች', had: 'Kaareshshu' },
-    subtitle: { en: 'Explore the wonders around Hossana — ancient stones, waterfalls, and vibrant markets.', am: 'በሆሳዕና አካባቢ ያሉ ቦታዎችን ይመልከቱ።', had: 'Explore around Hossana.' },
+    subtitle: { en: 'Explore the wonders around Hossana — ancient stones, waterfalls, and mountains.', am: 'በሆሳዕና አካባቢ ያሉ ቦታዎችን ይመልከቱ።', had: 'Explore around Hossana.' },
     distance: { en: 'from hotel', am: 'ከሆቴል', had: 'hotel ir' },
     visit: { en: 'Plan a visit', am: 'ጉብኝ ያቅዱ', had: 'Visit yaadi' },
     photos: { en: 'View photos', am: 'ፎቶዎችን ይመልከቱ', had: 'Photo aayi' },

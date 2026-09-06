@@ -325,7 +325,7 @@ export const t = {
     distance: { en: 'from hotel', am: 'ከሆቴል', had: 'hotel ir' },
     visit: { en: 'Plan a visit', am: 'ጉብኝ ያቅዱ', had: 'Visit yaadi' },
     photos: { en: 'View photos', am: 'ፎቶዎችን ይመልከቱ', had: 'Photo aayi' },
-  },
+  },  
   admin: {
     title: { en: 'Staff view', am: 'የሰራተኞች እይታ', had: 'Staff view' },
     overview: { en: 'Overview', am: 'አጠቃላይ', had: 'Overview' },

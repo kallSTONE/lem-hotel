@@ -355,7 +355,7 @@ export const t = {
     publish: { en: 'Publish announcement', am: 'ማስታወቂያ ያስታውቁ', had: 'Publish announcement' },
     backToSite: { en: 'Back to site', am: 'ወደ ድረ-ገጽ ይመለሱ', had: 'Site gaa' },
     needHelp: { en: 'Need a hand?', am: 'እርዳታ ያስፈልግዎታል?', had: 'Need help?' },
-    hereForYou: { en: 'We\'re here for you.', am: 'እኛ ለእርስዎ እንኖራለን።', had: 'Here for you.' },
+    hereForYou: { en: 'We\'re here for you.', am: 'እኛ አለንልዎ።', had: 'Here for you.' },
     manage: { en: 'Manage', am: 'አስተዳድር', had: 'Manage' },
     workspace: { en: 'Workspace', am: 'የስራ ቦታ', had: 'Workspace' },
   }, 

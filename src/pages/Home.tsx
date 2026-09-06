@@ -102,7 +102,7 @@ export default function Home({ onBook }: { onBook: () => void }) {
                   className={
                     index === heroIndex
                       ? 'hero-title-layer active'
-                      : 'hero-title-layer'
+                      : 'hero-title-layer' 
                   }
                 >
                   {line}
